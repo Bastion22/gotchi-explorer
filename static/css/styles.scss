@@ -1,0 +1,196 @@
+$carbon-black: #3d3d3d;
+// $carbon-black: #242424;
+$dark-grey: #777777;
+
+header {
+    background-color: $carbon-black;
+}
+
+.navbar {
+    height: 4em;
+
+    ul {
+        margin: 0em 0em 0em 0em;
+    }
+
+    .nav-logo {
+        position: absolute;
+        left: 4.5em;
+        width: 6em;
+        display: flex;
+        gap: 2em;
+        z-index: 999;
+        
+    }
+
+
+    .nav-menu {
+        display: flex;
+        position: absolute;
+        right: 4.5em;
+        gap: 5em;
+
+
+        .nav-item {
+            display: flex;
+            list-style: none;
+
+            a {
+                color: #ffffff;
+            }
+        }
+
+
+    }
+
+
+}
+
+
+
+.hamburger {
+    position: absolute;
+    right: 2em;
+    top: 1em;
+    display: none;
+    // height: 10em;
+    // width: 5em;
+    cursor: pointer;
+
+    .bar {
+        display: block;
+        width: 44px;
+        height: 44px;
+        // background-color: white;
+        // rotate: 90deg;
+    }
+
+    .bar-sword {
+        opacity: 0;
+        position: absolute;
+        top: 0em;
+        right: 1em;
+        height: 9px;
+        width: 9px;
+        
+        // width: 44px;
+        // height: 44px;
+        // background-color: white;
+        // rotate: 90deg;
+    }
+}
+
+
+
+
+
+@media(max-width:817px){
+    .hamburger{
+        display: block;
+
+        .bar {
+            visibility: visible; // Fade In - After Closing Sword Tab
+            opacity: 1;
+            transition: opacity 0.5s linear;
+        }
+
+    }
+
+    .hamburger.active .bar:nth-child(1) {    
+        visibility: hidden; // Fade Out - After Closing Sword Tab
+        opacity: 0;
+        transition: visibility 0s 0.1s, opacity 0.1s linear;
+        
+
+    }
+
+    .hamburger.active .bar-sword:nth-child(2) {
+        visibility: visible; // Fade In Sword on Menu Open
+        opacity: 1;
+        transition: opacity 0.4s linear;
+        transform: translate(13px) rotate(45deg);
+        // opacity: 50%;
+    }
+
+    .hamburger.active .bar-sword:nth-child(3) {
+        visibility: visible; // Fade In Sword on Menu Open
+        opacity: 1;
+        transition: opacity 0.4s linear;
+        transform: translate(-13px) rotate(-45deg);
+        // opacity: 50%;
+    }
+
+
+
+    .nav-menu {
+        position: fixed;
+        left: 0em;
+        // top: -300px;
+        top: -145px;
+        height: 9.3em;
+        // gap: 0;
+        flex-direction: column;
+        background-color: $carbon-black;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        display: block !important;
+    }
+
+    .nav-item {
+        display: flex;
+        justify-content: center;
+        padding: 0.1em 0em 0em 0em;
+
+        visibility: hidden; // Fade Out
+        opacity: 0;
+        transition: visibility 0s 0.1s, opacity 0.1s linear;
+        
+    }
+
+    .nav-menu.active {
+        left: 0em;
+        top: 27px;
+        display: block;
+        
+        .nav-item {
+            visibility: visible; // Fade In
+            opacity: 1;
+            transition: opacity 0.25s linear;
+          }
+
+
+    }
+
+
+
+    // .nav-menu {
+    //     display: none !important;
+    // }
+
+    .nav-logo {
+        left: 2em !important;
+        
+    }
+}
+
+
+// ------------------------------------------------ 
+
+
+
+
+
+
+
+
+.top-raster-home {
+    position: absolute;
+    top: 15em;
+}
+
+
+.bottom-raster-home {
+    position: absolute;
+    top: 20em;
+}

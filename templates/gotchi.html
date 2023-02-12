@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% include 'back_button.html' %}
+
+
+<div class="master-gotchi-team">
+
+        {% for svg_data in return_svg %}
+
+                <svg class="gotchi-himself">{{ svg_data |safe }}</svg>
+
+        {% endfor %}
+
+</div>
+
+
+<div class="stats-img-master">
+
+    <a href="http://127.0.0.1:8000/nrg/"><img class="stats-img" src="/static/images/stats/nrg.png" alt="nrg.png"></a>
+    <a href="http://127.0.0.1:8000/agg/"><img class="stats-img" src="/static/images/stats/agg.png" alt="agg.png"></a>
+    <a href="http://127.0.0.1:8000/spk/"><img class="stats-img" src="/static/images/stats/spk.png" alt="spk.png"></a>
+    <a href="http://127.0.0.1:8000/brn/"><img class="stats-img" src="/static/images/stats/brn.png" alt="brn.png"></a>
+    <a href="http://127.0.0.1:8000/eys/"><img class="stats-img" src="/static/images/stats/eys.png" alt="eys.png"></a>
+    <a href="http://127.0.0.1:8000/eyc/"><img class="stats-img" src="/static/images/stats/eyc.png" alt="eyc.png"></a>
+
+</div>
+
+
+<div class="stats-text-master">
+    {% for stat in text_stat_list %}
+    <button class="stats-text">{{ stat }}</button>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+
