@@ -4,6 +4,7 @@
 $carbon-black: #3d3d3d;
 // $carbon-black: #242424;
 $light-grey: #d8d7d7;
+$grey: #c9c9c9;
 
 // max-width properties:
 // Medium
@@ -24,7 +25,7 @@ header {
 }
 
 .navbar {
-    height: 4em;
+    height: 4.15em;
 
     ul {
         margin: 0em 0em 0em 0em;
@@ -41,10 +42,10 @@ header {
 
 
     .nav-menu {
-        display: flex;
         position: absolute;
         right: 4.5em;
         gap: 5em;
+        display: flex;
         font-family: 'Press Start 2P';
         font-size: 0.775em;
 
@@ -66,7 +67,7 @@ header {
 .hamburger {
     position: absolute;
     right: 2em;
-    top: 1em;
+    top: 1.05em;
     display: none;
     cursor: pointer;
 
@@ -81,8 +82,8 @@ header {
         position: absolute;
         top: 0em;
         right: 1em;
-        height: 9px;
-        width: 9px;
+        height: 9.25px;
+        width: 9.25px;
     }
 }
 
@@ -121,19 +122,6 @@ header {
     }
 
 
-    // .nav-menu {
-    //     position: fixed;
-    //     right: 0em;
-    //     // width: 100%;
-    //     // top: -145px;
-    //     top: 3em;
-    //     height: 10em;
-    //     // gap: 0;
-    //     background-color: $carbon-black;
-    //     transition: 0.4s; // Nav Fade In & Out
-    //     display: block !important;
-    // }
-
     .nav-menu {
         position: absolute;
         width: 100%;
@@ -164,9 +152,9 @@ header {
         // left: -1em;
         position: absolute;
         width: 100%;
-        top: 2em;
+        top: 1.75em;
         left: 0em;
-        height: 10.5em;
+        height: 10.6em;
         background-color: $carbon-black;
         display: block !important;
         // top: 20px;
@@ -461,5 +449,93 @@ header {
         
     }
 
+
+}
+
+
+
+// ---------------------------------------------------------------------------------- GOTCHI PAGE
+
+.master-gotchi {
+    display: flex;
+    justify-content: center;
+    
+
+    .gotchi-himself {
+        position: absolute;
+        height: 17em;
+        width: 17em;
+        top: 16em;
+        background: #ffffff;
+        box-shadow: 0px 2px 12px -6px $carbon-black;
+    }
+}
+
+.stats-img-master {
+    position: absolute;
+    top: 35em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .stats-img {
+        height: 2.5em;
+        // position: absolute;
+        // display: block;
+        margin: 0em 0.25em 0em 0.25em;
+
+    }
+}
+
+.stats-text-master {
+    position: absolute;
+    top: 38.5em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .stats-text {
+        color: white;
+        background-color: $carbon-black;
+        min-height: 2.75em;
+        min-width: 2.75em;
+        font-size: 14.25px;
+        // position: absolute;
+        // display: block;
+        margin: 0em 0.3em 0em 0.3em;
+        border-radius: 3px;
+    }
+}
+
+.master-back-button {
+    position: absolute;
+    top: 11.85em;
+    width: 100%;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+
+    .js-thing-ignore {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .back-button {
+            position: absolute;
+            align-self: center;
+            background-color: #9243d8;
+            color: white;
+            min-width: 7em;
+            min-height: 2em;
+            border-radius: 4.5px;
+            border: 0px;
+            // min-height: 1.75em;
+            color: #fffff3;
+            font-size: 1.1em;
+    
+        }
+
+
+    }
 
 }

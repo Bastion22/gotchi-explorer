@@ -4,7 +4,7 @@ header {
 }
 
 .navbar {
-  height: 4em;
+  height: 4.15em;
 }
 .navbar ul {
   margin: 0em 0em 0em 0em;
@@ -18,10 +18,10 @@ header {
   z-index: 999;
 }
 .navbar .nav-menu {
-  display: flex;
   position: absolute;
   right: 4.5em;
   gap: 5em;
+  display: flex;
   font-family: "Press Start 2P";
   font-size: 0.775em;
 }
@@ -36,7 +36,7 @@ header {
 .hamburger {
   position: absolute;
   right: 2em;
-  top: 1em;
+  top: 1.05em;
   display: none;
   cursor: pointer;
 }
@@ -50,8 +50,8 @@ header {
   position: absolute;
   top: 0em;
   right: 1em;
-  height: 9px;
-  width: 9px;
+  height: 9.25px;
+  width: 9.25px;
 }
 
 @media (max-width: 1092px) {
@@ -101,9 +101,9 @@ header {
   .nav-menu.active {
     position: absolute;
     width: 100%;
-    top: 2em;
+    top: 1.75em;
     left: 0em;
-    height: 10.5em;
+    height: 10.6em;
     background-color: #3d3d3d;
     display: block !important;
     width: 100%;
@@ -265,4 +265,71 @@ header {
   .gotchi-raster-right .mobile-right {
     display: none;
   }
+}
+.master-gotchi {
+  display: flex;
+  justify-content: center;
+}
+.master-gotchi .gotchi-himself {
+  position: absolute;
+  height: 17em;
+  width: 17em;
+  top: 16em;
+  background: #ffffff;
+  box-shadow: 0px 2px 12px -6px #3d3d3d;
+}
+
+.stats-img-master {
+  position: absolute;
+  top: 35em;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.stats-img-master .stats-img {
+  height: 2.5em;
+  margin: 0em 0.25em 0em 0.25em;
+}
+
+.stats-text-master {
+  position: absolute;
+  top: 38.5em;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.stats-text-master .stats-text {
+  color: white;
+  background-color: #3d3d3d;
+  min-height: 2.75em;
+  min-width: 2.75em;
+  font-size: 14.25px;
+  margin: 0em 0.3em 0em 0.3em;
+  border-radius: 3px;
+}
+
+.master-back-button {
+  position: absolute;
+  top: 11.85em;
+  width: 100%;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+}
+.master-back-button .js-thing-ignore {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.master-back-button .js-thing-ignore .back-button {
+  position: absolute;
+  align-self: center;
+  background-color: #9243d8;
+  color: white;
+  min-width: 7em;
+  min-height: 2em;
+  border-radius: 4.5px;
+  border: 0px;
+  color: #fffff3;
+  font-size: 1.1em;
 }/*# sourceMappingURL=styles.css.map */

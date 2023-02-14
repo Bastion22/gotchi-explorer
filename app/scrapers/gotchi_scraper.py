@@ -11,7 +11,7 @@ class GotchiScraper:
 
         query = f'''{{
         aavegotchi(id: "{self.gotchi_id}") {{
-            numericTraits
+            modifiedNumericTraits
         }}
         }}'''
 
@@ -19,7 +19,7 @@ class GotchiScraper:
         r = requests.post(url, json={'query': query})
         gotchi_raw_data = json.loads(r.text)
 
-        list_of_stats = gotchi_raw_data['data']['aavegotchi']['numericTraits']
+        list_of_stats = gotchi_raw_data['data']['aavegotchi']['modifiedNumericTraits']
 
         return list_of_stats
     
