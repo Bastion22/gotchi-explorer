@@ -5,18 +5,40 @@
 
 {% block content %}
 
+
 <div class="top-raster-home">
-    <span class="input-group-text">Enter Gotchi ID</span>
+    <div class="top-sub-raster-home">
+        <span class="input-group-text">Enter Gotchi ID</span>
+    </div>
 </div>
 
 <div class="bottom-raster-home">
-    <form method="post" action="{% url 'home_view' %}" class="form-class">
+    <div class="bottom-sub-raster-home">
+        <form method="post" action="{% url 'home_view' %}" class="form-class">
         {% csrf_token %}
         {{ form.as_p }}
         <!-- <input type="text" class="form-control"> -->
-        <input type="submit" class="submit-button" value="GO!">
+        <!-- <input type="submit" class="submit-button" value="GO!"> -->
+    </div>
   </div>
+
+  <div class="gotchi-raster-left">
+    <img class="gotchi-left" src="static/images/Brand/gotchis/ethKnight.svg" alt="gotchi-left.svg">
+    <img class="medium-left" src="static/images/Brand/wearables/portalAxe.svg" alt="portal-axe-left.svg">
+    <img class="mobile-left" src="static/images/Brand/wearables/pitchfork.svg" alt="staff-left.svg">
+  </div>
+
+  <div class="gotchi-raster-right">
+    <img class="gotchi-right" src="static/images/Brand/gotchis/yfiMonocle.svg" alt="gotchi-right.svg">
+    <img class="medium-right" src="static/images/Brand/wearables/portalAxe.svg" alt="portal-axe-right.svg">
+    <img class="mobile-right" src="static/images/Brand/wearables/pitchfork.svg" alt="staff-right.svg">
+  </div>
+
+  <!-- <div class="gotchi-raster-bottom">
+    <img class="gotchi-bottom" src="static/images/Brand/wearables/susButt.svg" alt="gotchi-bottom.svg">
+  </div> -->
   
+
 
 
 {% endblock %}

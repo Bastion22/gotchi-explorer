@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 header {
   background-color: #3d3d3d;
 }
@@ -21,6 +22,8 @@ header {
   position: absolute;
   right: 4.5em;
   gap: 5em;
+  font-family: "Press Start 2P";
+  font-size: 0.775em;
 }
 .navbar .nav-menu .nav-item {
   display: flex;
@@ -51,14 +54,14 @@ header {
   width: 9px;
 }
 
-@media (max-width: 817px) {
+@media (max-width: 1092px) {
   .hamburger {
     display: block;
   }
   .hamburger .bar {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.5s linear;
+    transition: opacity 0.25s linear;
   }
   .hamburger.active .bar:nth-child(1) {
     visibility: hidden;
@@ -78,33 +81,42 @@ header {
     transform: translate(-13px) rotate(-45deg);
   }
   .nav-menu {
-    position: fixed;
-    left: 0em;
-    top: -145px;
-    height: 9.3em;
-    flex-direction: column;
-    background-color: #3d3d3d;
+    position: absolute;
     width: 100%;
-    text-align: center;
-    transition: 0.3s;
+    top: -10em;
+    left: 0em;
+    height: 10em;
+    background-color: #3d3d3d;
     display: block !important;
+    transition: 0.4s;
   }
-  .nav-item {
+  .nav-menu .nav-item {
     display: flex;
+    margin: 0em 3em 0em 0em;
     justify-content: center;
-    padding: 0.1em 0em 0em 0em;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s 0.1s, opacity 0.1s linear;
+    transition: visibility 0s 0.15s, opacity 0.15s linear;
   }
   .nav-menu.active {
+    position: absolute;
+    width: 100%;
+    top: 2em;
     left: 0em;
-    top: 27px;
-    display: block;
+    height: 10.5em;
+    background-color: #3d3d3d;
+    display: block !important;
+    width: 100%;
   }
   .nav-menu.active .nav-item {
     visibility: visible;
+    display: flex;
+    position: relative;
+    right: 1.5em;
+    justify-content: center;
+    padding: 0.175em 0em 0em 0em;
     opacity: 1;
+    width: 100%;
     transition: opacity 0.25s linear;
   }
   .nav-logo {
@@ -113,10 +125,144 @@ header {
 }
 .top-raster-home {
   position: absolute;
-  top: 15em;
+  top: 21.5em;
+  width: 100%;
+}
+.top-raster-home .top-sub-raster-home {
+  padding: 0em 10em 0em 10em;
+  height: 2.475em;
+  display: flex;
+  justify-content: center;
+}
+.top-raster-home .top-sub-raster-home .input-group-text {
+  display: flex;
+  justify-content: center;
+  width: 15em;
+  background-color: #3d3d3d;
+  color: white;
+  border-radius: 5px;
+  border: none;
 }
 
 .bottom-raster-home {
   position: absolute;
-  top: 20em;
+  top: 24.85em;
+  width: 100%;
+}
+.bottom-raster-home .bottom-sub-raster-home {
+  padding: 0em 10em 0em 10em !important;
+  display: flex;
+  justify-content: center;
+}
+.bottom-raster-home .bottom-sub-raster-home .form-class {
+  padding: none !important;
+  width: 15em;
+  border-radius: 5px;
+}
+.bottom-raster-home .bottom-sub-raster-home .form-class .form-control {
+  display: block;
+  border: 1px solid #d8d7d7;
+}
+
+.gotchi-raster-left {
+  position: absolute;
+  top: 14.8em;
+  left: 0em;
+  width: 35%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+}
+.gotchi-raster-left .gotchi-left {
+  position: absolute;
+  width: 19em;
+  margin-right: 2em;
+  margin-left: 3.2em;
+}
+.gotchi-raster-left .medium-left {
+  display: none;
+}
+.gotchi-raster-left .mobile-left {
+  display: none;
+}
+
+.gotchi-raster-right {
+  position: absolute;
+  top: 14.8em;
+  right: 0em;
+  width: 35%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+}
+.gotchi-raster-right .gotchi-right {
+  position: absolute;
+  width: 19em;
+  margin-right: 3.2em;
+  margin-left: 2em;
+}
+.gotchi-raster-right .medium-right {
+  display: none;
+}
+.gotchi-raster-right .mobile-right {
+  display: none;
+}
+
+@media (max-width: 1092px) {
+  .gotchi-raster-left .gotchi-left {
+    display: none;
+  }
+  .gotchi-raster-left .medium-left {
+    position: relative;
+    top: 1em;
+    display: flex;
+    height: 17em;
+  }
+  .gotchi-raster-right .gotchi-right {
+    display: none;
+  }
+  .gotchi-raster-right .medium-right {
+    position: relative;
+    top: 1em;
+    display: flex;
+    height: 17em;
+    transform: scaleX(-1);
+  }
+}
+@media (max-width: 900px) {
+  .gotchi-raster-left .medium-left {
+    display: none;
+  }
+  .gotchi-raster-left .mobile-left {
+    position: relative;
+    top: 4em;
+    display: flex;
+    height: 10em;
+  }
+  .gotchi-raster-right {
+    vertical-align: middle;
+  }
+  .gotchi-raster-right .medium-right {
+    display: none;
+  }
+  .gotchi-raster-right .mobile-right {
+    position: relative;
+    top: 4em;
+    display: flex;
+    height: 10em;
+  }
+}
+@media (max-width: 673px) {
+  .gotchi-raster-left .mobile-left {
+    display: none;
+  }
+  .gotchi-raster-right {
+    vertical-align: middle;
+  }
+  .gotchi-raster-right .medium-right {
+    display: none;
+  }
+  .gotchi-raster-right .mobile-right {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

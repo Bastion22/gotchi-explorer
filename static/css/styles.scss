@@ -1,6 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
 $carbon-black: #3d3d3d;
 // $carbon-black: #242424;
-$dark-grey: #777777;
+$light-grey: #d8d7d7;
+
+// max-width properties:
+// Medium
+$medium-screen: 1092px;
+$mobile-screen: 900px;
+$mini-screen: 673px;
+// Small - Mobile
+
+
+
+// ---------------------------------------------------------------------------------- NAV BAR
+
+// Bigger Screen (BASE)
+
 
 header {
     background-color: $carbon-black;
@@ -20,7 +37,6 @@ header {
         display: flex;
         gap: 2em;
         z-index: 999;
-        
     }
 
 
@@ -29,22 +45,21 @@ header {
         position: absolute;
         right: 4.5em;
         gap: 5em;
-
+        font-family: 'Press Start 2P';
+        font-size: 0.775em;
 
         .nav-item {
             display: flex;
             list-style: none;
 
+
             a {
                 color: #ffffff;
             }
         }
-
-
     }
-
-
 }
+
 
 
 
@@ -53,16 +68,12 @@ header {
     right: 2em;
     top: 1em;
     display: none;
-    // height: 10em;
-    // width: 5em;
     cursor: pointer;
 
     .bar {
         display: block;
         width: 44px;
         height: 44px;
-        // background-color: white;
-        // rotate: 90deg;
     }
 
     .bar-sword {
@@ -72,36 +83,27 @@ header {
         right: 1em;
         height: 9px;
         width: 9px;
-        
-        // width: 44px;
-        // height: 44px;
-        // background-color: white;
-        // rotate: 90deg;
     }
 }
 
 
+// Smaller Screen (Animation Navbar)
 
-
-
-@media(max-width:817px){
+@media(max-width:$medium-screen){
     .hamburger{
         display: block;
 
         .bar {
-            visibility: visible; // Fade In - After Closing Sword Tab
+            visibility: visible; // Fade In Cacti - After Closing Sword Tab
             opacity: 1;
-            transition: opacity 0.5s linear;
+            transition: opacity 0.25s linear;
         }
-
     }
 
     .hamburger.active .bar:nth-child(1) {    
-        visibility: hidden; // Fade Out - After Closing Sword Tab
+        visibility: hidden; // Fade Out Cacti - After Closing Sword Tab
         opacity: 0;
-        transition: visibility 0s 0.1s, opacity 0.1s linear;
-        
-
+        transition: visibility 0s 0.1s, opacity 0.1s linear;  
     }
 
     .hamburger.active .bar-sword:nth-child(2) {
@@ -109,7 +111,6 @@ header {
         opacity: 1;
         transition: opacity 0.4s linear;
         transform: translate(13px) rotate(45deg);
-        // opacity: 50%;
     }
 
     .hamburger.active .bar-sword:nth-child(3) {
@@ -117,80 +118,348 @@ header {
         opacity: 1;
         transition: opacity 0.4s linear;
         transform: translate(-13px) rotate(-45deg);
-        // opacity: 50%;
     }
-
-
-
-    .nav-menu {
-        position: fixed;
-        left: 0em;
-        // top: -300px;
-        top: -145px;
-        height: 9.3em;
-        // gap: 0;
-        flex-direction: column;
-        background-color: $carbon-black;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        display: block !important;
-    }
-
-    .nav-item {
-        display: flex;
-        justify-content: center;
-        padding: 0.1em 0em 0em 0em;
-
-        visibility: hidden; // Fade Out
-        opacity: 0;
-        transition: visibility 0s 0.1s, opacity 0.1s linear;
-        
-    }
-
-    .nav-menu.active {
-        left: 0em;
-        top: 27px;
-        display: block;
-        
-        .nav-item {
-            visibility: visible; // Fade In
-            opacity: 1;
-            transition: opacity 0.25s linear;
-          }
-
-
-    }
-
 
 
     // .nav-menu {
-    //     display: none !important;
+    //     position: fixed;
+    //     right: 0em;
+    //     // width: 100%;
+    //     // top: -145px;
+    //     top: 3em;
+    //     height: 10em;
+    //     // gap: 0;
+    //     background-color: $carbon-black;
+    //     transition: 0.4s; // Nav Fade In & Out
+    //     display: block !important;
     // }
+
+    .nav-menu {
+        position: absolute;
+        width: 100%;
+        top: -10em;
+        left: 0em;
+        height: 10em;
+        background-color: $carbon-black;
+        display: block !important;
+        transition: 0.4s; // Nav Fade In & Out
+
+        .nav-item {
+            display: flex;
+            margin: 0em 3em 0em 0em;
+            // right: 3em;
+            justify-content: center;
+
+            visibility: hidden; // Fade Out Text
+            opacity: 0;
+            transition: visibility 0s 0.15s, opacity 0.15s linear;
+        
+    }
+
+
+    }
+
+
+    .nav-menu.active {
+        // left: -1em;
+        position: absolute;
+        width: 100%;
+        top: 2em;
+        left: 0em;
+        height: 10.5em;
+        background-color: $carbon-black;
+        display: block !important;
+        // top: 20px;
+        width: 100%;
+        
+        // display: block;
+        
+        .nav-item {
+            visibility: visible; // Fade In Text
+            display: flex;
+            position: relative;
+            right: 1.5em;
+            justify-content: center;
+            padding: 0.175em 0em 0em 0em;
+            opacity: 1;
+            width: 100%;
+            transition: opacity 0.25s linear;
+          }
+    }
 
     .nav-logo {
         left: 2em !important;
-        
     }
 }
 
 
-// ------------------------------------------------ 
+// ---------------------------------------------------------------------------------- HOME PAGE
 
 
+// Bigger Screen (BASE)
 
 
-
-
-
+// "Enter Gotchi ID"
 
 .top-raster-home {
     position: absolute;
-    top: 15em;
+    top: 21.5em;
+    width: 100%;
+    // right: 35em;
+    // left: 35em;
+
+    .top-sub-raster-home {
+        padding: 0em 10em 0em 10em;
+        height: 2.475em;
+        display: flex;
+        justify-content: center;
+
+        .input-group-text {
+            display: flex;
+            justify-content: center;
+            width: 15em;
+            background-color: $carbon-black;
+            color: white;
+            border-radius: 5px;
+            border: none;
+    
+        }
+    }
+
+
 }
 
 
+// Form
+
 .bottom-raster-home {
     position: absolute;
-    top: 20em;
+    top: 24.85em;
+    width: 100%;
+
+    .bottom-sub-raster-home {
+        padding: 0em 10em 0em 10em !important;
+        display: flex;
+        justify-content: center;
+
+        .form-class {
+            padding: none !important;
+            width: 15em;
+            // display: flex;
+            // justify-content: center;
+            // width: 15em;
+            border-radius: 5px;
+            
+            .form-control {
+                display: block;
+                border: 1px solid $light-grey;
+            }
+    
+        }
+
+    }
+}
+
+
+// Pictures Home Page
+
+.gotchi-raster-left {
+    position: absolute;
+    top: 14.8em;
+    left: 0em;
+    width: 35%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    // vertical-align: middle;
+
+    .gotchi-left {
+        position: absolute;
+        width: 19em;
+        margin-right: 2em;
+        margin-left: 3.2em;
+        // left: 7.5em;
+    }
+
+    .medium-left {
+        display: none;
+    }
+
+    .mobile-left {
+        display: none;
+    }
+    
+
+}
+
+// IMAGE BOTTOM
+// .gotchi-raster-bottom {
+//     display: none;
+// }
+
+.gotchi-raster-right {
+    position: absolute;
+    top: 14.8em;
+    right: 0em;
+    width: 35%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    // vertical-align: middle;
+
+    .gotchi-right {
+        position: absolute;
+        width: 19em;
+        // min-width: 15em;
+        margin-right: 3.2em;
+        margin-left: 2em;
+        // margin: 0em 3.2em 0em 2em;
+        // left: 7.5em;
+    }
+
+    .medium-right {
+        display: none;
+    }
+
+    .mobile-right {
+        display: none;
+    }
+    
+
+}
+
+
+
+// Medium Screen
+
+@media(max-width:$medium-screen) {
+
+    .gotchi-raster-left {
+
+        .gotchi-left {
+            // position: absolute;
+            display: none;
+            // margin: 0em 3em 0em 3em;
+            // left: 7.5em;
+        }
+
+        .medium-left {
+            position: relative;
+            top: 1em;
+            display: flex;
+            height: 17em;
+        }
+    }
+
+    .gotchi-raster-right {
+
+    
+        .gotchi-right {
+            // position: absolute;
+            display: none;
+            // left: 7.5em;
+        }
+
+        .medium-right {
+            position: relative;
+            top: 1em;
+            display: flex;
+            height: 17em;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+        
+    }
+
+
+    // BOTTOM IMAGE
+
+    // .gotchi-raster-bottom {
+    //     position: absolute;
+    //     top: 10em;
+    //     width: 100%;
+    //     display: flex;
+    //     justify-content: center;
+
+        
+
+    //     .gotchi-bottom {
+    //         height: 5em;
+    //     }
+    // }
+
+}
+
+// Very small Screen (Remove Gotchis)
+
+@media(max-width:$mobile-screen) {
+
+    .gotchi-raster-left {
+
+        .medium-left {
+            display: none;
+        }
+
+        .mobile-left {
+            position: relative;
+            top: 4em;
+            display: flex;
+            height: 10em;
+
+        }
+    }
+
+    .gotchi-raster-right {
+
+        vertical-align: middle;
+
+
+        .medium-right {
+            display: none;
+        }
+
+        .mobile-right {
+            position: relative;
+            top: 4em;
+            display: flex;
+            height: 10em;
+
+        }
+        
+    }
+
+
+}
+
+@media(max-width:$mini-screen) {
+
+    .gotchi-raster-left {
+
+        // .axe-left {
+        //     display: none;
+        // }
+
+        .mobile-left {
+            display: none;
+
+        }
+    }
+
+    .gotchi-raster-right {
+
+        vertical-align: middle;
+
+
+        .medium-right {
+            display: none;
+        }
+
+        .mobile-right {
+            display: none;
+
+        }
+        
+    }
+
+
 }
