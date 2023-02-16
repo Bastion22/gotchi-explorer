@@ -43,3 +43,18 @@ def gotchi_view(request, gotchi_id):
         'return_svg': return_svg,
     }
     return render(request, 'gotchi.html', context=context)  
+
+
+def about_view(request):
+    
+    return render(request, 'about.html')
+
+
+def contact_view(request):
+    
+    return render(request, 'contact.html')
+
+
+def nrg_view(request):
+
+    return render(request, 'nrg.html')
