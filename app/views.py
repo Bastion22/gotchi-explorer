@@ -35,7 +35,7 @@ def gotchi_view(request, gotchi_id):
         return_svg = gotchi_obj.get_svg() # Call
         
     except:
-        return render(request, 'error.html', {'id': id})
+        return render(request, 'errors/gotchi_not_found.html', {'id': gotchi_id})
         
     context = {
         # 'svg_list': svg_data_list,
@@ -56,5 +56,19 @@ def contact_view(request):
 
 
 def nrg_view(request):
+    return render(request, 'stats/attributes/nrg.html')
 
-    return render(request, 'nrg.html')
+def agg_view(request):
+    return render(request, 'stats/attributes/agg.html')
+
+def spk_view(request):
+    return render(request, 'stats/attributes/spk.html')
+
+def brn_view(request):
+    return render(request, 'stats/attributes/brn.html')
+
+def eys_view(request):
+    return render(request, 'stats/attributes/eys.html')
+
+def eyc_view(request):
+    return render(request, 'stats/attributes/eyc.html')

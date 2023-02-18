@@ -1,0 +1,41 @@
+{% extends 'stats/stats_template.html' %}
+
+
+{% block stat_img %}
+
+<div class="stats-page">
+  <img class="stats-object" src="/static/images/stats/nrg.png" alt="nrg.png">
+</div>
+
+{% endblock %}
+
+
+
+{% block left_button %}
+  HP Cap & Regen
+{% endblock %}
+
+
+{% block right_button %}
+    AP Cap & Regen
+{% endblock %}
+
+
+{% block left_modal_title  %}
+    HP Capacity & Regeneration
+{% endblock %}
+
+
+{% block right_modal_title %}
+    AP Capacity & Regeneration
+{% endblock %}
+
+
+{% block left_modal_content %}
+  HP stands for Health Points, a gotchi with low energy has as well a bigger capacity and a faster regeneration of these health points. Your gotchi is a TANK!
+{% endblock %}
+
+
+{% block right_modal_content %}
+    AP stands for Action Points, a gotchi with high energy has as well a bigger capacity and a faster regeneration of these action points. These points are used to sprint and attack, meaning your gotchi is hyperactive and can sprint and attack at a high pace!
+{% endblock %}

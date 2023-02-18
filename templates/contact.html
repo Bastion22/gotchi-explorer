@@ -2,22 +2,88 @@
 
 {% block content %}
 
+
 <div class="contact-text-1">
     <h2 class="contact-title-1">Feel free to reach out</h2>
     <p class="contact-paragraph-1">for whatever reason.</p>
 </div>
 
 <div class="contact-icons">
-    <img class="discord-icon" src="/static/images/icons/contact/discord.png" alt="discord.png">
-    <img class="twitter-icon" src="/static/images/icons/contact/twitter.png" alt="twitter.png">
-    <img class="gmail-icon" src="/static/images/icons/contact/gmail.png" alt="gmail.png">
+    <div class="discord-master">
+            <a href="https://discord.gg/nUGzBAhn" target="_blank"><img class="discord-icon" src="/static/images/icons/contact/discord.png" alt="discord.png"></a>
+            <span class="discord-bg"></span>
+    </div>
+
+    <div class="twitter-master">
+        <a href="https://twitter.com/newdaynewgotchi" target="_blank"><img class="twitter-icon" src="/static/images/icons/contact/twitter.png" alt="twitter.png"></a>
+        <span class="twitter-bg"></span>
+    </div>
+
+    <div class="gmail-master">
+        <img onclick="copyText('gotchiExplorer@proton.me')" class="gmail-icon" src="/static/images/icons/contact/gmail.png" alt="gmail.png">
+        <span onclick="copyText('gotchiExplorer@proton.me')" class="gmail-bg"></span>
+      </div>
 </div>
 
-<div class="background-icons">
-    <span class="discord-bg"></span>
+
+
+<!-- <div class="custom-popup" id="custom-popup" style="display:none;">
+    <p class="popup-text">"gotchiexplorer@gmail.com" has been copied to the clipboard!</p>
+  </div> -->
+
+<button onclick="copyText('Hello, World!')" style="display:none;"></button>
+
+<div class="custom-popup" id="custom-popup">
+  <p class="popup-text"></p>
+</div>
+  
+  <!-- <script>
+    function copyText(textToCopy) {
+      const el = document.createElement('textarea');
+      el.value = textToCopy;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+    
+      // Show custom popup message
+      const popup = document.getElementById('custom-popup');
+      popup.style.display = 'block';
+    
+      // Hide popup after 3 seconds
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 3000);
+    }
+    </script> -->
+
+<script>
+    function copyText(textToCopy) {
+        const el = document.createElement('textarea');
+        el.value = textToCopy;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+
+        // Show custom popup message
+        const popup = document.getElementById('custom-popup');
+        popup.querySelector('.popup-text').textContent = `${textToCopy} has been copied to your clipboard.`;
+        popup.classList.add('show');
+
+        // Hide popup after 3 seconds
+        setTimeout(() => {
+            popup.classList.remove('show');
+        }, 3000);
+        }
+</script>
+  
+
+
+<!-- <div class="background-icons">
     <span class="twitter-bg"></span>
     <span class="gmail-bg"></span>
-</div>
+</div> -->
 
 
 {% endblock %}

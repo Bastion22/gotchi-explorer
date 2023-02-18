@@ -5,6 +5,7 @@ $carbon-black: #3d3d3d;
 // $carbon-black: #242424;
 $light-grey: #d8d7d7;
 $grey: #c9c9c9;
+$dark-grey: #727272;
 
 // max-width properties:
 // Medium
@@ -12,6 +13,8 @@ $medium-screen: 1092px;
 $mobile-screen: 900px;
 $mini-screen: 673px;
 $smallest-screen: 600px;
+
+$stats-response: 850px;
 // Small - Mobile
 
 
@@ -550,12 +553,15 @@ header {
     width: 100%;
 
     .stats-text {
+        position: relative;
+        left: 0.1em;
         color: white;
         background-color: $carbon-black;
         border: none;
         min-height: 2.75em;
         min-width: 2.75em;
         font-size: 14.25px;
+        cursor: pointer;
         // position: absolute;
         // display: block;
         margin: 0em 0.3em 0em 0.3em;
@@ -622,6 +628,230 @@ header {
 
     }
 
+}
+
+// ---------------------------------------------------------------------------------- STAT PAGE(S)
+
+
+.master-stats-focus {
+    position: relative;
+    top: 17.5em;
+    height: 6.65em;
+    display: flex;
+    justify-content: center;
+
+    .curve-img {
+        filter: drop-shadow(0px 2px 2.5px $carbon-black);
+        transition: 1s;
+    }
+}
+
+.stats-page {
+
+    position: relative;
+    top: 17.5em;
+    display: flex;
+    justify-content: center;
+
+    .stats-object {
+        position: relative;
+        bottom: 11.75em;
+        height: 2.45em;
+        // transition: 1s;
+        filter: drop-shadow(0px 2px 2.5px $carbon-black);
+
+        transform: rotate(0deg);
+        transition: transform 1s;
+    }
+
+    .stats-object:hover {
+        // rotate: 360deg !important;
+        // transition: 1s;
+
+        transform: rotate(360deg);
+    }
+
+    .stats-object:not(:hover) {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+      }
+
+    to {
+        transform: rotate(360deg);
+      }
+}
+
+.curve-numbers {
+    position: relative;
+    top: 18.15em;
+    display: flex;
+    justify-content: center;
+    height: 2em;
+
+    .stat-number-under-curve {
+        width: 5.1em;
+        text-align: center;
+        color: $dark-grey;
+        // padding: 0em 2em 0em 2em;
+
+    }
+}
+
+.stats-explanation {    
+    position: relative;
+    top: 15.75em;
+    display: flex;
+    justify-content: center;
+
+    .left-of-curve {
+        // font-family: Noto Sans JP;
+        margin-right: 4em !important;
+        font-size: 0.925em;
+        text-align: center !important;
+        width: 8.8em;
+        height: 2.4em;
+        margin: 0.9em;
+        padding-bottom: 0.1em;
+        background-color: $carbon-black;
+        filter: drop-shadow(0px 2px 2.5px $light-grey);
+
+        border: none;
+        border-radius: 0.5em;
+        color: white;
+        transition: 0.5s;
+    }
+
+    .left-of-curve:hover {
+        background-color: #650acd;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .right-of-curve {
+        // font-family: Noto Sans JP;
+        margin-left: 4em !important;
+        font-size: 0.925em;
+        text-align: center !important;
+        color: #4b4b4b;
+        width: 8.8em;
+        height: 2.4em;
+        margin: 0.9em;
+        padding-bottom: 0.1em;
+        background-color: $carbon-black;
+        filter: drop-shadow(0px 2px 2.5px $light-grey);
+        
+
+        border: none;
+        border-radius: 0.5em;
+        color: white;
+        transition: 0.5s;
+    }
+
+    .right-of-curve:hover {
+        background-color: #650acd;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    // .right
+}
+
+
+.modal {
+    position: fixed;
+    top: 12.5em !important;
+    // left: 7em;
+    padding: 0em 3.5em 0em 3.5em;
+    // right: 20em;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+
+    .modal-dialog {
+        // does nothing
+        .modal-content {
+            min-height: 20em;
+            .modal-header {
+                .modal-title {
+                    font-size: 1.25em;
+                }   
+            }
+
+        }
+    }
+
+}
+
+
+@media(min-width:$stats-response) {
+
+    .master-stats-focus {
+        top: 17.5em;
+        height: 11em;
+        display: flex;
+        justify-content: center;
+
+    
+    }
+
+    .stats-page {
+
+        position: relative;
+        top: 12em;
+        display: flex;
+        justify-content: center;
+    
+        .stats-object {
+            bottom: 12em;
+            height: 3.15em;
+        }
+    
+    }
+
+    .curve-numbers {
+        top: 18.35em;
+    
+        .stat-number-under-curve {
+            width: 7em;
+            text-align: center;
+            color: $dark-grey;
+            font-size: 1.2em;
+            // padding: 0em 2em 0em 2em;
+    
+        }
+    }
+
+    .stats-explanation {    
+        top: 15.75em;
+        display: flex;
+        justify-content: center;
+    
+        .left-of-curve {
+            // font-family: Noto Sans JP;
+            margin-right: 8em !important;
+            font-size: 1.1em;
+            width: 8.8em;
+            height: 2.4em;
+    
+
+        }
+
+        .right-of-curve {
+            // font-family: Noto Sans JP;
+            margin-left: 8em !important;
+            font-size: 1.1em;
+            text-align: center !important;
+            width: 8.8em;
+            height: 2.4em;
+        }
+
+    }
 }
 
 
@@ -736,7 +966,6 @@ header {
 }
 
 .contact-icons {
-
     position: absolute;
     top: 22.05em;
     width: 100%;
@@ -744,102 +973,181 @@ header {
     display: flex;
     justify-content: center;
 
-
-    .discord-icon {
+    .discord-master {
         position: relative;
-        right: 2.3em;
-        height: 2.8em !important;
-        z-index: 99;
-        max-height: 3em;
-        cursor: pointer;
+        // top: 1em;
+
+
+        .discord-icon {
+            position: relative;
+            top: 0.08em;
+            right: -1.125em;
+            height: 2.8em !important;
+            max-height: 3em;
+            cursor: pointer;
+            z-index: 999;
+
+        }
+
+        .discord-bg {
+            position: relative;
+            top: -3.75em;
+            // right: 1.125em;
+            display: block;
+            margin: 0em 0.5em 0em 0.5em;
+            height: 5em;
+            width: 5em;
+            background-color: $carbon-black;
+            border-radius: 7.5px;
+            transition: 0.3s;
+            cursor: pointer;
+            // z-index: 99;
+
+        }
+
     }
 
-    .twitter-icon {
-        position: relative;
-        left: 0.05em;
-        min-height: 2.75em;
-        z-index: 99;
-        max-height: 3em !important;
-        cursor: pointer;
+    .discord-master:hover {
+        filter: drop-shadow(0px 0px 5px #7122f8);
+        transition: 0.3s;
     }
 
-    .gmail-icon {
+    .twitter-master {
         position: relative;
-        left: 2.339em;
-        bottom: 0.35em;
-        z-index: 99;
-        min-height: 3.8em;
-        // background-color: $carbon-black;
-        max-height: 3em;
-        filter: brightness(0) invert(1);
-        cursor: pointer;
-        // filter: opacity(1) drop-shadow(0 0 0 white);
+        // top: 1em;
+
+
+        .twitter-icon {
+            position: relative;
+            top: 0.08em;
+            right: -1.3em;
+            height: 2.8em !important;
+            max-height: 3em;
+            cursor: pointer;
+            z-index: 999;
+
+        }
+
+        .twitter-bg {
+            position: relative;
+            top: -3.75em;
+            // right: 1.125em;
+            display: block;
+            margin: 0em 0.5em 0em 0.5em;
+            height: 5em;
+            width: 5em;
+            background-color: $carbon-black;
+            border-radius: 7.5px;
+            transition: 0.3s;
+            cursor: pointer;
+            // z-index: 99;
+
+        }
+
+    }
+
+    .twitter-master:hover {
+        filter: drop-shadow(0px 0px 5px #0693ff);
+        transition: 0.3s;
     }
 
 
+    .gmail-master {
+        position: relative;
+        top: -0.77em;
+        // top: 1em;
+
+
+        .gmail-icon {
+            position: relative;
+            top: 0.43em;
+            left: 1.225em;
+            height: 3.55em !important;
+            filter: brightness(0) invert(1);
+            cursor: pointer;
+            z-index: 999;
+
+        }
+
+        .gmail-bg {
+            position: relative;
+            top: -3.75em;
+            display: block;
+            margin: 0em 0.5em 0em 0.5em;
+            height: 5em;
+            width: 5em;
+            background-color: $carbon-black;
+            border-radius: 7.5px;
+            transition: 0.3s;
+            cursor: pointer;
+
+        }
+
+    }
+
+    .gmail-master:hover {
+        filter: drop-shadow(0px 0px 5px #d20202);
+        transition: 0.3s;
+    }
 }
 
 
 
+.custom-popup {
+    position: relative;
+    left: 8.5em;
+    right: 0;
+    top: 25.5em;
+    width: 17em;
+    height: 4.2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  
+    &.show {
+      opacity: 1;
+    }
+
+    .popup-text {
+        color: $dark-grey;
+        position: relative;
+        text-align: center;
+    }
+  }
 
 
-.background-icons {
-    position: absolute;
-    top: 21.1em;
+
+// ---------------------------------------------------------------------------------- ERRORS: GOTCHI NOT FOUND
+
+
+.portal-master {
+    position: relative;
+    top: 10.5em;
+    height: 50%;
     width: 100%;
-    height: 5em;
     display: flex;
     justify-content: center;
 
-    .discord-bg {
-        margin: 0em 0.5em 0em 0.5em;
-        height: 5em;
-        width: 5em;
-        background-color: $carbon-black;
-        border-radius: 7.5px;
-        transition: 0.3s;
-        cursor: pointer;
+    .closed-portal {
+
+        height: 21em;
     }
-
-    // .discord-bg:hover {
-    //     filter: drop-shadow(0px 0px 5px #481ce8);
-    //     transition: 0.3s;
-    // }
-
-
-    .twitter-bg {
-        margin: 0em 0.5em 0em 0.5em;
-        height: 5em;
-        width: 5em;
-        background-color: $carbon-black;
-        border-radius: 7.5px;
-        transition: 0.3s;
-        cursor: pointer;
-    }
-
-    // .twitter-bg:hover {
-    //     filter: drop-shadow(0px 0px 5px #0c96ff);
-    //     transition: 0.3s;
-    // }
-
-
-    .gmail-bg {
-        margin: 0em 0.5em 0em 0.5em;
-        height: 5em;
-        width: 5em;
-        background-color: $carbon-black;
-        border-radius: 7.5px;
-        transition: 0.3s;
-        cursor: pointer;
-    }
-
-    // .gmail-bg:hover {
-    //     filter: drop-shadow(0px 0px 5px #d20202);
-    //     transition: 0.3s;
-    // }
 }
 
+.not-summoned-master {
+    position: relative;
+    top: 12.5em;
+    display: flex;
+    justify-content: center;
 
-
-
-
+    .not-summoned-text {
+        text-align: center;
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+}

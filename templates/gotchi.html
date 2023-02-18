@@ -30,9 +30,16 @@
 
 
 <div class="stats-text-master">
-    {% for stat in text_stat_list %}
+    <a href="http://127.0.0.1:8000/nrg/"><button class="stats-text">{{ text_stat_list.0 }}</button></a>
+    <a href="http://127.0.0.1:8000/agg/"><button class="stats-text">{{ text_stat_list.1 }}</button></a>
+    <a href="http://127.0.0.1:8000/spk/"><button class="stats-text">{{ text_stat_list.2 }}</button></a>
+    <a href="http://127.0.0.1:8000/brn/"><button class="stats-text">{{ text_stat_list.3 }}</button></a>
+    <a href="http://127.0.0.1:8000/eys/"><button class="stats-text">{{ text_stat_list.4 }}</button></a>
+    <a href="http://127.0.0.1:8000/eyc/"><button class="stats-text">{{ text_stat_list.5 }}</button></a>
+
+    <!-- {% for stat in text_stat_list %}
     <button class="stats-text">{{ stat }}</button>
-    {% endfor %}
+    {% endfor %} -->
 </div>
 
 

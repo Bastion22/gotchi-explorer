@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% include 'back_button.html' %}
+
+{% include 'stats/stats_frame.html' %}
+
+
+{% block stat_img %}
+
+{% endblock %}
+
+
+<!-- <div class="stats-explanation">
+    <button class="left-of-curve">Defense Power</button>
+    <button class="right-of-curve">Attack Speed</button>
+</div> -->
+
+
+
+<!-- Button trigger modal -->
+<div class="stats-explanation">
+    <button type="button" class="left-of-curve" data-bs-toggle="modal" data-bs-target="#ModalLeft">
+        {% block left_button %}
+        {% endblock %}
+    </button>
+    <button type="button" class="right-of-curve" data-bs-toggle="modal" data-bs-target="#ModalRight">
+        {% block right_button %}
+        {% endblock %}
+    </button>
+</div>
+  
+  <!-- Modal Left -->
+  <div class="modal" id="ModalLeft" tabindex="-1" aria-labelledby="ModalLeft" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="ModalLeft">
+            {% block left_modal_title %}
+            {% endblock %}
+          </h1>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            {% block left_modal_content %}
+            {% endblock %}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Modal Right -->
+<div class="modal" id="ModalRight" tabindex="-1" aria-labelledby="ModalRight" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalRight">
+            {% block right_modal_title %}
+            {% endblock %}
+            </h1>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            {% block right_modal_content %}
+            {% endblock %}
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+{% endblock %}
+
