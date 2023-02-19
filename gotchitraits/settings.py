@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-ltz9tw=c*xn$!t5ha&@qft@c%=zv5h(@uk7=lv2kdobkh+-=kw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'gotchi-explorer.herokuapp.com']
+ALLOWED_HOSTS = ['gotchiexplorer.com', 'www.gotchiexplorer.com']
 
 
 
