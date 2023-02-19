@@ -1,1 +1,1 @@
-web: gunicorn gotchitraits:app
+web: gunicorn gotchitraits.wsgi
