@@ -274,14 +274,14 @@ header {
 }
 @media (max-width: 463px) {
   .main-raster-home .main-sub-raster-home {
-    padding: 0em 10em 0em 10em;
+    padding: 0em 4em 0em 4em !important;
   }
   .main-raster-home .main-sub-raster-home .input-group-text {
-    width: 9.6em;
+    width: 11.5em;
     transition: 1.5s;
   }
   .main-raster-home .main-sub-raster-home .form-class {
-    width: 9.6em;
+    width: 11.5em;
     transition: 1.5s;
   }
 }
