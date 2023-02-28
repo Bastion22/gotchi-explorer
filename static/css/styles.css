@@ -397,6 +397,7 @@ header {
   }
   .stats-text-master {
     top: 34em;
+    margin-bottom: 2em;
   }
   .stats-text-master .stats-text {
     min-height: 2.5em;
