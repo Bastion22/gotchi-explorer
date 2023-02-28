@@ -15,7 +15,7 @@ class GotchiScraper:
         }}
         }}'''
 
-        url = 'https://subgraph.satsuma-prod.com/aavegotchi/aavegotchi-core-matic/playground'
+        url = 'https://subgraph.satsuma-prod.com/tWYl5n5y04oz/aavegotchi/aavegotchi-core-matic/api'
         r = requests.post(url, json={'query': query})
         gotchi_raw_data = json.loads(r.text)
 
@@ -32,7 +32,7 @@ class GotchiScraper:
         }}
         }}'''
 
-        url = 'https://subgraph.satsuma-prod.com/aavegotchi/aavegotchi-core-matic/playground'
+        url = 'https://api.thegraph.com/subgraphs/name/aavegotchi/aavegotchi-svg'
         r = requests.post(url, json={'query': query})
         gotchi_svg_raw_data = json.loads(r.text)
 
@@ -45,6 +45,31 @@ class GotchiScraper:
 
 # gotchi_earth = StatScraper(5129)
 # print(gotchi_earth.get_stats())
+
+
+# query = f'''{{
+# aavegotchi(id: 9400) {{
+#     svg
+# }}
+# }}'''
+
+
+
+# url = 'https://api.thegraph.com/subgraphs/name/aavegotchi/aavegotchi-svg'
+# r = requests.post(url, json={'query': query})
+
+# gotchi_svg_raw_data = json.loads(r.text)
+
+# print(gotchi_svg_raw_data)
+
+# parsed_svg_data = gotchi_svg_raw_data['data']['aavegotchi']['svg']
+# print(parsed_svg_data)
+    
+# gotchi_svg_raw_data = json.loads(r.text)
+
+
+# parsed_svg_data = gotchi_svg_raw_data['data']['aavegotchi']['svg']
+# print(parsed_svg_data)
 
 
 
