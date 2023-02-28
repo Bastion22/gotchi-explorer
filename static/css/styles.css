@@ -590,44 +590,43 @@ header {
   z-index: -1;
 }
 
-.about-text-2 {
-  position: relative;
-  top: 41em;
+.about-text-bottom-master {
+  position: absolute;
+  top: 45em;
+  width: 100%;
+}
+.about-text-bottom-master .about-text-2 {
+  display: flex;
+  justify-content: center;
   width: 100%;
   display: block;
 }
-.about-text-2 .about-title-2 {
-  margin: 0em 2em 0em 2em !important;
+.about-text-bottom-master .about-text-2 .about-title-2 {
+  margin: 0em 3.5em 0em 3.5em !important;
   text-align: center;
 }
-.about-text-2 .about-paragraph-2 {
+.about-text-bottom-master .about-text-2 .about-paragraph-2 {
   position: relative;
   top: 0.25em;
-  margin: 0em 3em 5em 3em !important;
+  margin: 0em 3.5em 2.5em 3.5em !important;
   text-align: center;
 }
-
-.about-text-3 {
+.about-text-bottom-master .about-text-3 {
   position: relative;
-  top: 38.25em;
-  width: 100%;
   display: block;
 }
-.about-text-3 .about-paragraph-3 {
+.about-text-bottom-master .about-text-3 .about-paragraph-3 {
   text-align: center;
-  margin: 0em 3em 0em 3em !important;
+  margin: 0em 3.5em 0em 3.5em !important;
 }
-
-.about-text-4 {
-  position: relative;
-  top: 37.25em;
+.about-text-bottom-master .about-text-4 {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.about-text-4 .about-paragraph-4 {
+.about-text-bottom-master .about-text-4 .about-paragraph-4 {
   text-align: center;
-  margin: 3em 2.75em 5em 2.75em !important;
+  margin: 2.5em 3.5em 5em 3.5em !important;
 }
 
 @media (max-width: 463px) {
@@ -640,6 +639,9 @@ header {
   .down-arrow-master {
     position: relative;
     top: 1.1em;
+  }
+  .about-text-bottom-master {
+    top: 40.5em;
   }
 }
 .contact-text-1 {
