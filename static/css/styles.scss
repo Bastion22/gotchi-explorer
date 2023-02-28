@@ -863,6 +863,7 @@ header {
 
     .about-title-1 {
         text-align: center;
+        margin: 0em 2em 0em 2em !important;
     }
 
     .about-paragraph-1 {
@@ -915,10 +916,14 @@ header {
     display: block;
 
     .about-title-2 {
+        margin: 0em 2em 0em 2em !important;
         text-align: center;
     }
 
     .about-paragraph-2 {
+        position: relative;
+        top: 0.25em;
+        margin: 0em 2.75em 5em 2.75em !important;
         text-align: center;
     }
 }
@@ -931,20 +936,24 @@ header {
 
     .about-paragraph-3 {
         text-align: center;
+        // line-height: em;
+        margin: 0em 2.75em 5em 2.75em !important;
     }
 }
 
-.about-text-4 {
-    position: absolute;
-    top: 55.8em;
-    width: 100%;
-    display: block;
+@media(max-width:$actual-mobile) {
 
-    .about-paragraph-4 {
-        text-align: center;
-        margin-bottom: 5em;
+    .about-gotchi-master {
+        top: 18.5em;
+    
+        .about-gotchi {
+            height: 18.5em;
+        }
     }
+
 }
+
+
 
 // ---------------------------------------------------------------------------------- CONTACT PAGE
 
