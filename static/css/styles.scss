@@ -188,42 +188,6 @@ header {
 
 // ---------------------------------------------------------------------------------- HOME PAGE
 
-
-// Bigger Screen (BASE)
-
-
-// "Enter Gotchi ID" -> Has been moved due to submit REASON
-
-// .top-raster-home {
-//     position: absolute;
-//     top: 21.5em;
-//     width: 100%;
-//     // right: 35em;
-//     // left: 35em;
-
-//     .top-sub-raster-home {
-//         padding: 0em 10em 0em 10em;
-//         height: 2.475em;
-//         display: flex;
-//         justify-content: center;
-
-//         // .input-group-text {
-//         //     display: flex;
-//         //     justify-content: center;
-//         //     width: 15em;
-//         //     height: 2.43em;
-//         //     background-color: $carbon-black;
-//         //     color: white;
-//         //     border-radius: 5px;
-//         //     border: none;
-    
-//         // }
-//     }
-
-
-// }
-
-
 // Form
 
 .main-raster-home {
@@ -253,6 +217,8 @@ header {
         }
 
         .form-class {
+            position: absolute;
+            top: 0em;
             padding: none !important;
             width: 15em;
             transition: 1.5s;
@@ -493,6 +459,7 @@ header {
             }
     
             .form-class {
+                top: -3em;
                 width: 12.75em;
                 transition: 1.5s;
                 
@@ -512,8 +479,10 @@ header {
     
         .main-sub-raster-home {
             padding: 0em 4em 0em 4em !important;
+            // top: 13em;
     
             .input-group-text {
+                
                 width: 11.5em;
                 transition: 1.5s;
         

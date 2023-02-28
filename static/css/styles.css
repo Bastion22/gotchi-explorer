@@ -147,6 +147,8 @@ header {
   border: none;
 }
 .main-raster-home .main-sub-raster-home .form-class {
+  position: absolute;
+  top: 0em;
   padding: none !important;
   width: 15em;
   transition: 1.5s;
@@ -268,6 +270,7 @@ header {
     transition: 1.5s;
   }
   .main-raster-home .main-sub-raster-home .form-class {
+    top: -3em;
     width: 12.75em;
     transition: 1.5s;
   }
