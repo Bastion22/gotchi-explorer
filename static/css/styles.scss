@@ -13,6 +13,7 @@ $medium-screen: 1092px;
 $mobile-screen: 900px;
 $mini-screen: 673px;
 $smallest-screen: 600px;
+$actual-mobile: 463px;
 
 $stats-response: 850px;
 // Small - Mobile
@@ -441,7 +442,7 @@ header {
 
 }
 
-// Very small Screen | Remove Pickaxes
+// Very small Screen | Remove Pitchforks
 
 @media(max-width:$mini-screen) {
 
@@ -483,7 +484,7 @@ header {
     .main-raster-home {
     
         .main-sub-raster-home {
-            padding: 0em 8em 0em 8em !important;
+            padding: 0em 10em 0em 10em;
     
             .input-group-text {
                 width: 12.75em;
@@ -503,6 +504,34 @@ header {
     }
 
 }
+
+
+@media(max-width:$actual-mobile) {
+
+    .main-raster-home {
+    
+        .main-sub-raster-home {
+            padding: 0em 10em 0em 10em;
+    
+            .input-group-text {
+                width: 9.6em;
+                transition: 1.5s;
+        
+            }
+    
+            .form-class {
+                width: 9.6em;
+                transition: 1.5s;
+                
+
+        
+            }
+    
+        }
+    }
+
+}
+
 
 
 

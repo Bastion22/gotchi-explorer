@@ -261,7 +261,7 @@ header {
 }
 @media (max-width: 600px) {
   .main-raster-home .main-sub-raster-home {
-    padding: 0em 8em 0em 8em !important;
+    padding: 0em 10em 0em 10em;
   }
   .main-raster-home .main-sub-raster-home .input-group-text {
     width: 12.75em;
@@ -269,6 +269,19 @@ header {
   }
   .main-raster-home .main-sub-raster-home .form-class {
     width: 12.75em;
+    transition: 1.5s;
+  }
+}
+@media (max-width: 463px) {
+  .main-raster-home .main-sub-raster-home {
+    padding: 0em 10em 0em 10em;
+  }
+  .main-raster-home .main-sub-raster-home .input-group-text {
+    width: 9.6em;
+    transition: 1.5s;
+  }
+  .main-raster-home .main-sub-raster-home .form-class {
+    width: 9.6em;
     transition: 1.5s;
   }
 }

@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ltz9tw=c*xn$!t5ha&@qft@c%=zv5h(@uk7=lv2kdobkh+-=kw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['gotchiexplorer.com', 'www.gotchiexplorer.com']
+ALLOWED_HOSTS = ['gotchiexplorer.com', 'www.gotchiexplorer.com', '127.0.0.1']
 
 
 
