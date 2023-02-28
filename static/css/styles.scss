@@ -106,6 +106,8 @@ header {
         }
     }
 
+
+
     .hamburger.active .bar:nth-child(1) {    
         visibility: hidden; // Fade Out Cacti - After Closing Sword Tab
         opacity: 0;
@@ -117,6 +119,8 @@ header {
         opacity: 1;
         transition: opacity 0.4s linear;
         transform: translate(13px) rotate(45deg);
+
+        
     }
 
     .hamburger.active .bar-sword:nth-child(3) {
@@ -124,7 +128,9 @@ header {
         opacity: 1;
         transition: opacity 0.4s linear;
         transform: translate(-13px) rotate(-45deg);
+
     }
+    
 
 
     .nav-menu {
@@ -164,6 +170,9 @@ header {
         display: block !important;
         // top: 20px;
         width: 100%;
+
+
+
         
         // display: block;
         
@@ -507,8 +516,8 @@ header {
 
 
 // ---------------------------------------------------------------------------------- GOTCHI PAGE
-// ---------------------------------------------------------------------------------- GOTCHI PAGE
-// ---------------------------------------------------------------------------------- GOTCHI PAGE
+// ---------------------------------------------------------------------------------- 
+// ----------------------------------------------------------------------------------
 
 
 .master-gotchi {
@@ -618,23 +627,16 @@ header {
     
         }
 
+        .back-button.hidden {
+            display: none;
+        }
+
         .back-button:hover {
             background: linear-gradient(187deg, rgb(72, 8, 155) 0%, rgb(80, 21, 175) 35%, rgb(157, 83, 209) 100%);
             // background: linear-gradient(187deg, rgb(221, 47, 198) 0%, rgb(234, 91, 215) 35%, rgb(253, 128, 238) 100%);
             box-shadow: 0px 2px 12px -4px $carbon-black;
             transition: 1s;
         }
-
-        // .back-button-img {
-        //     position: relative;
-        //     right: 12.5em;
-        //     top: -3.5em;
-
-        //     // rotate: 270deg;
-        //     height: 10em;
-        //     // -webkit-transform: scaleX(-1);
-        //     // transform: scaleX(-1);
-        // }
 
 
     }
@@ -687,9 +689,25 @@ header {
 
     }
 
+    // .master-back-button {
+    
+    //     .js-thing-ignore {
+    
+    //         .back-button {
+    //             // display: none;
+        
+    //         }
+    
+    
+    
+    //     }
+    
+    // }
 }
 
 // ---------------------------------------------------------------------------------- STAT PAGE(S)
+// ---------------------------------------------------------------------------------- 
+// ---------------------------------------------------------------------------------- 
 
 
 .master-stats-focus {
@@ -915,6 +933,8 @@ header {
 
 
 // ---------------------------------------------------------------------------------- ABOUT PAGE
+// ---------------------------------------------------------------------------------- 
+// ---------------------------------------------------------------------------------- 
 
 .about-text-1 {
     position: absolute;
@@ -942,6 +962,7 @@ header {
     .about-gotchi {
         height: 20em;
         cursor: pointer;
+        filter: drop-shadow(0px 2px 2.5px $dark-grey);
     }
 }
 

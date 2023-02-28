@@ -375,6 +375,9 @@ header {
   font-size: 1.1em;
   box-shadow: 0px 2px 12px -6px #3d3d3d;
 }
+.master-back-button .js-thing-ignore .back-button.hidden {
+  display: none;
+}
 .master-back-button .js-thing-ignore .back-button:hover {
   background: linear-gradient(187deg, rgb(72, 8, 155) 0%, rgb(80, 21, 175) 35%, rgb(157, 83, 209) 100%);
   box-shadow: 0px 2px 12px -4px #3d3d3d;
@@ -593,6 +596,7 @@ header {
 .about-gotchi-master .about-gotchi {
   height: 20em;
   cursor: pointer;
+  filter: drop-shadow(0px 2px 2.5px #727272);
 }
 
 @keyframes bounce {
