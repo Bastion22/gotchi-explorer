@@ -587,11 +587,12 @@ header {
   animation: bounce 1s infinite;
   height: 5em;
   rotate: 270deg;
+  z-index: -1;
 }
 
 .about-text-2 {
-  position: absolute;
-  top: 47.5em;
+  position: relative;
+  top: 41em;
   width: 100%;
   display: block;
 }
@@ -602,19 +603,31 @@ header {
 .about-text-2 .about-paragraph-2 {
   position: relative;
   top: 0.25em;
-  margin: 0em 2.75em 5em 2.75em !important;
+  margin: 0em 3em 5em 3em !important;
   text-align: center;
 }
 
 .about-text-3 {
-  position: absolute;
-  top: 54em;
+  position: relative;
+  top: 38.25em;
   width: 100%;
   display: block;
 }
 .about-text-3 .about-paragraph-3 {
   text-align: center;
-  margin: 0em 2.75em 5em 2.75em !important;
+  margin: 0em 3em 0em 3em !important;
+}
+
+.about-text-4 {
+  position: relative;
+  top: 37.25em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.about-text-4 .about-paragraph-4 {
+  text-align: center;
+  margin: 3em 2.75em 5em 2.75em !important;
 }
 
 @media (max-width: 463px) {
@@ -623,6 +636,10 @@ header {
   }
   .about-gotchi-master .about-gotchi {
     height: 18.5em;
+  }
+  .down-arrow-master {
+    position: relative;
+    top: 1.1em;
   }
 }
 .contact-text-1 {
