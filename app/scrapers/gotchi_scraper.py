@@ -10,12 +10,12 @@ class GotchiScraper:
     def get_stats(self): # Get Gotchi Stats
 
         query = f'''{{
-        aavegotchi(id: "{self.gotchi_id}") {{
+        aavegotchi(id: {self.gotchi_id}) {{
             modifiedNumericTraits
         }}
         }}'''
 
-        url = 'https://api.thegraph.com/subgraphs/name/aavegotchi/aavegotchi-core-matic'
+        url = 'https://subgraph.satsuma-prod.com/aavegotchi/aavegotchi-core-matic/playground'
         r = requests.post(url, json={'query': query})
         gotchi_raw_data = json.loads(r.text)
 
@@ -27,12 +27,12 @@ class GotchiScraper:
     def get_svg(self): # Get Gotchi SVG
         
         query = f'''{{
-        aavegotchi(id: "{self.gotchi_id}") {{
+        aavegotchi(id: {self.gotchi_id}) {{
             svg
         }}
         }}'''
 
-        url = 'https://api.thegraph.com/subgraphs/name/aavegotchi/aavegotchi-svg'
+        url = 'https://subgraph.satsuma-prod.com/aavegotchi/aavegotchi-core-matic/playground'
         r = requests.post(url, json={'query': query})
         gotchi_svg_raw_data = json.loads(r.text)
 
