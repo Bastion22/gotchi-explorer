@@ -510,7 +510,7 @@ header {
   font-size: 1.1em;
   text-align: center !important;
   width: 8.8em;
-  height: 2.5em;
+  height: 2.4em;
   margin: 0.9em;
   padding-bottom: 0.1em;
   background-color: #3d3d3d;
@@ -531,7 +531,7 @@ header {
   text-align: center !important;
   color: #4b4b4b;
   width: 8.8em;
-  height: 2.5em;
+  height: 2.4em;
   margin: 0.9em;
   padding-bottom: 0.1em;
   background-color: #3d3d3d;
@@ -595,14 +595,14 @@ header {
     margin-right: 3.5em !important;
     font-size: 1.025em;
     width: 8.8em;
-    height: 2.5em;
+    height: 2.4em;
   }
   .stats-explanation .right-of-curve {
     margin-left: 3.5em !important;
     font-size: 1.025em;
     text-align: center !important;
     width: 8.8em;
-    height: 2.5em;
+    height: 2.4em;
   }
 }
 @media (max-width: 459px) {
@@ -634,17 +634,17 @@ header {
     top: 14em;
   }
   .stats-explanation .left-of-curve {
-    margin-right: 1.75em !important;
-    font-size: 0.95em;
+    margin-right: 1.7em !important;
+    font-size: 0.925em;
     width: 8.8em;
-    height: 2.5em;
+    height: 2.4em;
   }
   .stats-explanation .right-of-curve {
-    margin-left: 1.75em !important;
-    font-size: 0.95em;
+    margin-left: 1.7em !important;
+    font-size: 0.925em;
     text-align: center !important;
     width: 8.8em;
-    height: 2.5em;
+    height: 2.4em;
   }
 }
 .about-text-1 {
