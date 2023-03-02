@@ -279,7 +279,7 @@ header {
     transition: 1.5s;
   }
 }
-@media (max-width: 453px) {
+@media (max-width: 459px) {
   .main-raster-home .main-sub-raster-home {
     padding: 0em 4em 0em 4em !important;
   }
@@ -366,14 +366,14 @@ header {
   height: 2em;
   display: flex;
   justify-content: center;
-  z-index: -1;
   transition: opacity 0.225s ease-in;
   opacity: 1;
 }
 .master-back-button .js-thing-ignore {
   display: flex;
   justify-content: center;
-  width: 100%;
+  height: 2.5em;
+  width: 8em;
   cursor: default;
 }
 .master-back-button .js-thing-ignore .back-button {
@@ -401,7 +401,7 @@ header {
   transition: opacity 0.15s ease-out;
 }
 
-@media (max-width: 453px) {
+@media (max-width: 459px) {
   .master-gotchi .gotchi-himself {
     height: 13.5em;
     width: 13.5em;
@@ -428,9 +428,13 @@ header {
   }
   .master-back-button {
     position: absolute;
-    top: 7.75em;
+    top: 8em;
     width: 100%;
     height: 2em;
+  }
+  .master-back-button .js-thing-ignore {
+    height: 2em;
+    width: 7em;
   }
   .master-back-button .js-thing-ignore .back-button {
     min-width: 7em;
@@ -442,8 +446,8 @@ header {
 }
 .master-stats-focus {
   position: relative;
-  top: 17.5em;
-  height: 6.65em;
+  top: 15.75em;
+  height: 11em;
   display: flex;
   justify-content: center;
 }
@@ -454,14 +458,14 @@ header {
 
 .stats-page {
   position: relative;
-  top: 17.5em;
+  top: 10.25em;
   display: flex;
   justify-content: center;
 }
 .stats-page .stats-object {
   position: relative;
-  bottom: 11.75em;
-  height: 2.45em;
+  bottom: 12em;
+  height: 3.15em;
   filter: drop-shadow(0px 2px 2.5px #3d3d3d);
   transform: rotate(0deg);
   transition: transform 1s;
@@ -483,29 +487,30 @@ header {
 }
 .curve-numbers {
   position: relative;
-  top: 18.15em;
+  top: 16.75em;
   display: flex;
   justify-content: center;
   height: 2em;
 }
 .curve-numbers .stat-number-under-curve {
-  width: 5.1em;
+  width: 7em;
   text-align: center;
   color: #727272;
+  font-size: 1.2em;
 }
 
 .stats-explanation {
   position: relative;
-  top: 15.75em;
+  top: 14.25em;
   display: flex;
   justify-content: center;
 }
 .stats-explanation .left-of-curve {
-  margin-right: 4em !important;
-  font-size: 0.925em;
+  margin-right: 8em !important;
+  font-size: 1.1em;
   text-align: center !important;
   width: 8.8em;
-  height: 2.4em;
+  height: 2.5em;
   margin: 0.9em;
   padding-bottom: 0.1em;
   background-color: #3d3d3d;
@@ -521,12 +526,12 @@ header {
   cursor: pointer;
 }
 .stats-explanation .right-of-curve {
-  margin-left: 4em !important;
-  font-size: 0.925em;
+  margin-left: 8em !important;
+  font-size: 1.1em;
   text-align: center !important;
   color: #4b4b4b;
   width: 8.8em;
-  height: 2.4em;
+  height: 2.5em;
   margin: 0.9em;
   padding-bottom: 0.1em;
   background-color: #3d3d3d;
@@ -558,49 +563,88 @@ header {
   font-size: 1.25em;
 }
 
-@media (min-width: 850px) {
+@media (max-width: 850px) {
   .master-stats-focus {
-    top: 17.5em;
-    height: 11em;
+    position: relative;
+    top: 17em;
+    height: 6.65em;
     display: flex;
     justify-content: center;
   }
   .stats-page {
     position: relative;
-    top: 12em;
+    top: 16.75em;
     display: flex;
     justify-content: center;
   }
   .stats-page .stats-object {
-    bottom: 12em;
-    height: 3.15em;
+    bottom: 11.75em;
+    height: 2.45em;
   }
   .curve-numbers {
-    top: 18.35em;
+    top: 17.75em;
   }
   .curve-numbers .stat-number-under-curve {
-    width: 7em;
-    text-align: center;
-    color: #727272;
-    font-size: 1.2em;
+    width: 5.1em;
+    font-size: 1em;
   }
   .stats-explanation {
-    top: 15.75em;
+    top: 15.25em;
+  }
+  .stats-explanation .left-of-curve {
+    margin-right: 3.5em !important;
+    font-size: 1.025em;
+    width: 8.8em;
+    height: 2.5em;
+  }
+  .stats-explanation .right-of-curve {
+    margin-left: 3.5em !important;
+    font-size: 1.025em;
+    text-align: center !important;
+    width: 8.8em;
+    height: 2.5em;
+  }
+}
+@media (max-width: 459px) {
+  .master-stats-focus {
+    position: relative;
+    top: 14.75em;
+    height: 5.25em;
     display: flex;
     justify-content: center;
   }
+  .stats-page {
+    position: relative;
+    top: 16em;
+    display: flex;
+    justify-content: center;
+  }
+  .stats-page .stats-object {
+    bottom: 11.825em;
+    height: 2.1em;
+  }
+  .curve-numbers {
+    top: 15.75em;
+  }
+  .curve-numbers .stat-number-under-curve {
+    width: 4em;
+    font-size: 1em;
+  }
+  .stats-explanation {
+    top: 14em;
+  }
   .stats-explanation .left-of-curve {
-    margin-right: 8em !important;
-    font-size: 1.1em;
+    margin-right: 1.75em !important;
+    font-size: 0.95em;
     width: 8.8em;
-    height: 2.4em;
+    height: 2.5em;
   }
   .stats-explanation .right-of-curve {
-    margin-left: 8em !important;
-    font-size: 1.1em;
+    margin-left: 1.75em !important;
+    font-size: 0.95em;
     text-align: center !important;
     width: 8.8em;
-    height: 2.4em;
+    height: 2.5em;
   }
 }
 .about-text-1 {
@@ -692,7 +736,7 @@ header {
   margin: 2.5em 3.5em 5em 3.5em !important;
 }
 
-@media (max-width: 453px) {
+@media (max-width: 459px) {
   .about-gotchi-master {
     top: 18.5em;
   }
@@ -841,7 +885,7 @@ header {
   text-align: center;
 }
 
-@media (max-width: 453px) {
+@media (max-width: 459px) {
   .contact-text-1 {
     position: absolute;
     top: 11.5em;
