@@ -634,14 +634,14 @@ header {
     top: 14em;
   }
   .stats-explanation .left-of-curve {
-    margin-right: 1.65em !important;
-    font-size: 0.9em;
+    margin-right: 1.5em !important;
+    font-size: 0.88em;
     width: 8.8em;
     height: 2.4em;
   }
   .stats-explanation .right-of-curve {
-    margin-left: 1.65em !important;
-    font-size: 0.9em;
+    margin-left: 1.5em !important;
+    font-size: 0.88em;
     text-align: center !important;
     width: 8.8em;
     height: 2.4em;
