@@ -363,7 +363,7 @@ header {
   display: flex;
   justify-content: center;
   z-index: -1;
-  transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.225s ease-in;
   opacity: 1;
 }
 .master-back-button .js-thing-ignore {
@@ -394,6 +394,7 @@ header {
 .master-back-button.hidden {
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.15s ease-out;
 }
 
 @media (max-width: 453px) {
