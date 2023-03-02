@@ -294,9 +294,9 @@ header {
 }
 .master-gotchi .gotchi-himself {
   position: absolute;
-  height: 17em;
-  width: 17em;
-  top: 14em;
+  height: 17.5em;
+  width: 17.5em;
+  top: 12.75em;
   background: #ffffff;
   filter: drop-shadow(0px 2px 2.5px #727272);
 }
@@ -306,7 +306,7 @@ header {
 
 .stats-img-master {
   position: absolute;
-  top: 33em;
+  top: 32.75em;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -324,7 +324,7 @@ header {
 
 .stats-text-master {
   position: absolute;
-  top: 37em;
+  top: 36.75em;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -337,9 +337,11 @@ header {
   border: none;
   min-height: 2.75em;
   min-width: 2.75em;
+  max-height: 2.75em;
+  max-width: 2.75em;
   font-size: 14.25px;
   cursor: pointer;
-  margin: 0em 0.3em 0em 0.3em;
+  margin: 0em 0.31em 0em 0.31em;
   border-radius: 3px;
   filter: drop-shadow(0px 2px 1px #c9c9c9);
 }
@@ -351,16 +353,18 @@ header {
 
 .master-back-button {
   position: absolute;
-  top: 10em;
+  top: 8em;
   width: 100%;
   height: 2em;
   display: flex;
   justify-content: center;
+  z-index: -1;
 }
 .master-back-button .js-thing-ignore {
   display: flex;
   justify-content: center;
   width: 100%;
+  cursor: default;
 }
 .master-back-button .js-thing-ignore .back-button {
   position: absolute;
@@ -388,10 +392,10 @@ header {
   .master-gotchi .gotchi-himself {
     height: 13.5em;
     width: 13.5em;
-    top: 13.75em;
+    top: 12.25em;
   }
   .stats-img-master {
-    top: 28.75em;
+    top: 27.75em;
   }
   .stats-img-master .stats-img {
     margin: 0em 0.25em 0em 0.25em;
@@ -400,12 +404,14 @@ header {
     transition: 1s;
   }
   .stats-text-master {
-    top: 32.25em;
+    top: 31.25em;
     margin-bottom: 8em;
   }
   .stats-text-master .stats-text {
     min-height: 2.5em;
     min-width: 2.5em;
+    max-height: 2.5em;
+    max-width: 2.5em;
     font-size: 14.25px;
     margin: 0em 0.3em 0em 0.3em;
   }
