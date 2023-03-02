@@ -356,6 +356,7 @@ header {
 }
 
 .master-back-button {
+  opacity: 1;
   position: absolute;
   top: 9.25em;
   width: 100%;
@@ -391,6 +392,10 @@ header {
   background: linear-gradient(187deg, rgb(72, 8, 155) 0%, rgb(80, 21, 175) 35%, rgb(157, 83, 209) 100%);
   box-shadow: 0px 2px 12px -4px #3d3d3d;
   transition: 1s;
+}
+
+.master-back-button.hidden {
+  opacity: 0;
 }
 
 @media (max-width: 453px) {

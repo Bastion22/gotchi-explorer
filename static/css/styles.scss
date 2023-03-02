@@ -606,6 +606,7 @@ header {
 }
 
 .master-back-button {
+    opacity: 1;
     position: absolute;
     top: 9.25em;
     width: 100%;
@@ -652,6 +653,10 @@ header {
     }
 
 }
+
+.master-back-button.hidden {
+    opacity: 0;
+  }
 
 
 @media(max-width:$actual-mobile) {
