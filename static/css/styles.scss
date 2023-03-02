@@ -2,6 +2,7 @@
 
 
 $carbon-black: #3d3d3d;
+$carbon-black-2: rgb(81, 81, 81);
 // $carbon-black: #242424;
 $light-grey: #d8d7d7;
 $grey: #c9c9c9;
@@ -217,13 +218,19 @@ header {
             display: flex;
             justify-content: center;
             width: 15em;
-            transition: 1.5s;
+            transition: 0.1s;
             // min-width: 153em;
             height: 2.43em;
             background-color: $carbon-black;
             color: white;
             border-radius: 5px;
             border: none;
+    
+        }
+
+        .input-group-text:hover {
+            transition: 0.1s;
+            background-color: $carbon-black-2;
     
         }
 
@@ -1101,6 +1108,8 @@ header {
 
 
 // ---------------------------------------------------------------------------------- CONTACT PAGE
+// ---------------------------------------------------------------------------------- 
+// ---------------------------------------------------------------------------------- 
 
 .contact-text-1 {
     position: absolute;
@@ -1110,10 +1119,12 @@ header {
 
     .contact-title-1 {
         text-align: center;
+        font-size: 2em;
     }
 
     .contact-paragraph-1 {
         text-align: center;
+        font-size: 1.2em;
     }
 }
 
@@ -1212,7 +1223,7 @@ header {
 
         .gmail-icon {
             position: relative;
-            top: 0.43em;
+            top: 0.465em;
             left: 1.225em;
             height: 3.55em !important;
             filter: brightness(0) invert(1);
@@ -1272,6 +1283,95 @@ header {
     }
   }
 
+
+@media(max-width:$actual-mobile) {
+
+    .contact-text-1 {
+        position: absolute;
+        top: 11.5em;
+        width: 100%;
+        display: block;
+    
+        .contact-title-1 {
+            font-size: 1.65em;
+        }
+    
+        .contact-paragraph-1 {
+            font-size: 1em;
+        }
+    }
+    
+    .contact-icons {
+        top: 20.5em;
+    
+        .discord-master {
+    
+            .discord-icon {
+                height: 2.4em !important;
+    
+            }
+    
+            .discord-bg {
+                top: -3.4em;
+                height: 4.5em;
+                width: 4.5em;
+
+                transition: 0.3s;
+    
+            }
+    
+        }
+    
+    
+        .twitter-master {
+    
+            .twitter-icon {
+                height: 2.45em !important;
+    
+            }
+    
+            .twitter-bg {
+                top: -3.45em;
+                height: 4.5em;
+                width: 4.5em;
+                transition: 0.3s;
+    
+            }
+    
+        }
+    
+    
+    
+        .gmail-master {
+    
+    
+            .gmail-icon {
+                position: relative;
+                top: 0.43em;
+                height: 3em !important;
+    
+            }
+    
+            .gmail-bg {
+                top: -3.235em;
+                height: 4.5em;
+                width: 4.5em;
+    
+            }
+    
+        }
+    
+    }
+    
+    
+    
+    .custom-popup {
+
+        top: 23.5em;
+
+  }
+
+}
 
 
 // ---------------------------------------------------------------------------------- ERRORS: GOTCHI NOT FOUND

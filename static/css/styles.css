@@ -139,12 +139,16 @@ header {
   display: flex;
   justify-content: center;
   width: 15em;
-  transition: 1.5s;
+  transition: 0.1s;
   height: 2.43em;
   background-color: #3d3d3d;
   color: white;
   border-radius: 5px;
   border: none;
+}
+.main-raster-home .main-sub-raster-home .input-group-text:hover {
+  transition: 0.1s;
+  background-color: rgb(81, 81, 81);
 }
 .main-raster-home .main-sub-raster-home .form-class {
   position: absolute;
@@ -711,9 +715,11 @@ header {
 }
 .contact-text-1 .contact-title-1 {
   text-align: center;
+  font-size: 2em;
 }
 .contact-text-1 .contact-paragraph-1 {
   text-align: center;
+  font-size: 1.2em;
 }
 
 .contact-icons {
@@ -786,7 +792,7 @@ header {
 }
 .contact-icons .gmail-master .gmail-icon {
   position: relative;
-  top: 0.43em;
+  top: 0.465em;
   left: 1.225em;
   height: 3.55em !important;
   filter: brightness(0) invert(1);
@@ -835,6 +841,54 @@ header {
   text-align: center;
 }
 
+@media (max-width: 453px) {
+  .contact-text-1 {
+    position: absolute;
+    top: 11.5em;
+    width: 100%;
+    display: block;
+  }
+  .contact-text-1 .contact-title-1 {
+    font-size: 1.65em;
+  }
+  .contact-text-1 .contact-paragraph-1 {
+    font-size: 1em;
+  }
+  .contact-icons {
+    top: 20.5em;
+  }
+  .contact-icons .discord-master .discord-icon {
+    height: 2.4em !important;
+  }
+  .contact-icons .discord-master .discord-bg {
+    top: -3.4em;
+    height: 4.5em;
+    width: 4.5em;
+    transition: 0.3s;
+  }
+  .contact-icons .twitter-master .twitter-icon {
+    height: 2.45em !important;
+  }
+  .contact-icons .twitter-master .twitter-bg {
+    top: -3.45em;
+    height: 4.5em;
+    width: 4.5em;
+    transition: 0.3s;
+  }
+  .contact-icons .gmail-master .gmail-icon {
+    position: relative;
+    top: 0.43em;
+    height: 3em !important;
+  }
+  .contact-icons .gmail-master .gmail-bg {
+    top: -3.235em;
+    height: 4.5em;
+    width: 4.5em;
+  }
+  .custom-popup {
+    top: 23.5em;
+  }
+}
 .portal-master {
   position: relative;
   top: 10.5em;
