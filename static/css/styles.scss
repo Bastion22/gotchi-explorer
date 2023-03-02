@@ -606,7 +606,6 @@ header {
 }
 
 .master-back-button {
-    opacity: 1;
     position: absolute;
     top: 9.25em;
     width: 100%;
@@ -614,7 +613,8 @@ header {
     display: flex;
     justify-content: center;
     z-index: -1;
-    transition: display 0.3s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
+    opacity: 1;
 
     .js-thing-ignore {
         display: flex;
@@ -638,9 +638,6 @@ header {
     
         }
 
-        .back-button.hidden {
-            display: none;
-        }
 
         .back-button:hover {
             background: linear-gradient(187deg, rgb(72, 8, 155) 0%, rgb(80, 21, 175) 35%, rgb(157, 83, 209) 100%);
@@ -656,6 +653,7 @@ header {
 
 .master-back-button.hidden {
     opacity: 0;
+    pointer-events: none;
   }
 
 

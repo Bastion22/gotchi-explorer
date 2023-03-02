@@ -1,29 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Get references to the objects that you want to click on and hide/show
-    const cactiMenus = document.querySelectorAll('.cacti-menu');
+    const hamburger = document.querySelector('.hamburger');
     const backButton = document.querySelectorAll('.master-back-button');
   
     // Add event listeners to the objects that you want to click on
-    cactiMenus.forEach(function(cactiMenu) {
-        console.log("Adding click event listener to cactiMenu");
-        cactiMenu.addEventListener('click', function() {
-            console.log("cactiMenu clicked");
-            backButton.forEach(function(button) {
-            button.classList.add('hidden');
-            });
+    let clicks = 0;
+    hamburger.addEventListener('click', function() {
+      clicks++;
+      if (clicks === 1) {
+        // Hide the backButton element on the first click
+        backButton.forEach(function(button) {
+          button.classList.add('hidden');
         });
-        });
-  
-    const menuSword = document.querySelector('.menu-sword');
-    if (menuSword) {
-      menuSword.addEventListener('click', function() {
-        console.log("menuSword clicked");
-        // Show the backButton element when the swordMenu element is clicked
+      } else if (clicks === 2) {
+        // Show the backButton element on the second click
         backButton.forEach(function(button) {
           button.classList.remove('hidden');
         });
-      });
-    }
+        clicks = 0;
+      }
+    });
   });
 
 
