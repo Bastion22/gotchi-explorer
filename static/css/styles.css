@@ -437,8 +437,8 @@ header {
     width: 7em;
   }
   .master-back-button .js-thing-ignore .back-button {
-    min-width: 7em;
-    min-height: 2em;
+    min-width: 6.85em;
+    min-height: 1.925em;
     border-radius: 4.5px;
     border: 0px;
     font-size: 1em;
@@ -634,14 +634,14 @@ header {
     top: 14em;
   }
   .stats-explanation .left-of-curve {
-    margin-right: 1.2em !important;
-    font-size: 0.7em;
+    margin-right: 1.3em !important;
+    font-size: 0.82em;
     width: 10em;
     height: 2.4em;
   }
   .stats-explanation .right-of-curve {
-    margin-left: 1.2em !important;
-    font-size: 0.7em;
+    margin-left: 1.3em !important;
+    font-size: 0.82em;
     text-align: center !important;
     width: 10em;
     height: 2.4em;
