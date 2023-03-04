@@ -11,17 +11,33 @@ $dark-grey: #727272;
 // max-width properties:
 // Medium
 $medium-screen: 1092px;
-$mobile-screen: 900px;
-$mini-screen: 673px;
+$ipad-screen: 900px;
+$mini-screen: 681px;
 $smallest-screen: 600px;
 $actual-mobile: 459px;
 
 $stats-response: 850px;
+$width-546px: 546px;
 // Small - Mobile
+
+
+// ---------------------------------------------------------------------------------- BOOTSTRAP FIX
+// ---------------------------------------------------------------------------------- TEXT DECORATION
+// ---------------------------------------------------------------------------------- 
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
 
 
 
 // ---------------------------------------------------------------------------------- NAV BAR
+// ---------------------------------------------------------------------------------- 
+// ---------------------------------------------------------------------------------- 
 
 // Bigger Screen (BASE)
 
@@ -195,8 +211,414 @@ header {
     }
 }
 
-
 // ---------------------------------------------------------------------------------- HOME PAGE
+// ---------------------------------------------------------------------------------- 
+// ---------------------------------------------------------------------------------- 
+
+
+// -------------------------------- Gotchis
+
+.explore-raster-left {
+
+    position: absolute;
+    top: 16.25em;
+    width: 50%;
+    height: 50%;
+    left: 3.25em;
+    text-align: center;
+
+
+    .explore-title-left {
+
+        .explore-gotchis {
+            text-align: center;
+            font-size: 2em;
+            cursor: pointer;
+            color: $carbon-black;
+
+            transition: 0.5s;
+        }
+
+        .explore-gotchis:hover {
+            color: $carbon-black-2;
+        }
+    }
+
+    .gotchis-raster-left {
+        
+
+        .gotchis-left-1 {
+            position: relative;
+            top: 2em;
+            max-height: 14em;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .gotchis-left-1:hover {
+            filter: drop-shadow(0px 2px 2.5px $dark-grey);
+            transition: 0.25s;
+        }
+    }
+}
+
+
+
+// -------------------------------- Wearables
+
+.explore-raster-right {
+
+    position: absolute;
+    top: 16.25em;
+    width: 50%;
+    height: 50%;
+    right: 3.25em;
+    text-align: center;
+
+    .explore-title-right {
+
+        .explore-wearables {
+            text-align: center;
+            font-size: 2em;
+            cursor: pointer;
+            color: $carbon-black;
+            
+            transition: 0.5s;
+        }
+
+        .explore-wearables:hover {
+            color: $carbon-black-2;
+        }
+    }
+
+    .wearables-raster-right {
+        .wearables-right-1 {
+            position: relative;
+            top: 2.85em;
+            height: 11.5em;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .wearables-right-1:hover {
+            filter: drop-shadow(0px 2px 2.5px $dark-grey);
+            transition: 0.25s;
+        }
+    }
+
+}
+
+
+@media(max-width:$medium-screen) {
+
+    .explore-raster-left {
+
+        top: 16.25em;
+        left: 2em;
+    
+        .explore-title-left {
+    
+            .explore-gotchis {
+                font-size: 1.8em;
+                transition: 0.5s;
+            }
+        }
+    
+        .gotchis-raster-left {
+    
+            .gotchis-left-1 {
+                position: relative;
+                top: 2em;
+                height: 14em;
+            }
+    
+        }
+    }
+    
+    
+    
+    // -------------------------------- Wearables
+    
+    .explore-raster-right {
+    
+        top: 16.25em;
+        right: 2em;
+    
+        .explore-title-right {
+    
+            .explore-wearables {
+                font-size: 1.8em;
+                transition: 0.5s;
+            }
+    
+        }
+    
+        .wearables-raster-right {
+            .wearables-right-1 {
+                top: 2.85em;
+                height: 11.5em;
+            }
+    
+        }
+    
+    }
+
+}
+
+@media(max-width:$ipad-screen) {
+
+    .explore-raster-left {
+
+        top: 16.25em;
+        left: 1em;
+    
+        .explore-title-left {
+    
+            .explore-gotchis {
+                font-size: 1.7em;
+                transition: 0.5s;
+            }
+        }
+    
+        .gotchis-raster-left {
+    
+            .gotchis-left-1 {
+                position: relative;
+                top: 2em;
+                height: 12.5em;
+            }
+    
+        }
+    }
+    
+    
+    
+    // -------------------------------- Wearables
+    
+    .explore-raster-right {
+    
+        top: 16.25em;
+        right: 1em;
+    
+        .explore-title-right {
+    
+            .explore-wearables {
+                font-size: 1.7em;
+                transition: 0.5s;
+            }
+    
+        }
+    
+        .wearables-raster-right {
+            .wearables-right-1 {
+                top: 2.85em;
+                height: 10em;
+            }
+    
+        }
+    
+    }
+
+}
+
+
+@media(max-width:$mini-screen) {
+
+    .explore-raster-left {
+
+        top: 16.25em;
+        left: 1em;
+    
+        .explore-title-left {
+    
+            .explore-gotchis {
+                font-size: 1.35em;
+                transition: 0.5s;
+            }
+        }
+    
+        .gotchis-raster-left {
+    
+            .gotchis-left-1 {
+                position: relative;
+                top: 2em;
+                height: 10.5em;
+            }
+    
+        }
+    }
+    
+    
+    
+    // -------------------------------- Wearables
+    
+    .explore-raster-right {
+    
+        top: 16.25em;
+        right: 1em;
+    
+        .explore-title-right {
+    
+            .explore-wearables {
+                font-size: 1.35em;
+                transition: 0.5s;
+            }
+    
+        }
+    
+        .wearables-raster-right {
+            .wearables-right-1 {
+                top: 2.85em;
+                height: 8em;
+            }
+    
+        }
+    
+    }
+
+}
+
+
+@media(max-width:$width-546px) {
+
+    .explore-raster-left {
+
+        position: absolute;
+        top: 7.85em;
+        width: 100%;
+        height: 50%;
+        left: 0em;
+        text-align: center;
+    
+        .explore-title-left {
+    
+            .explore-gotchis {
+                font-size: 1.5em;
+                transition: 0.5s;
+            }
+        }
+    
+        .gotchis-raster-left {
+    
+            .gotchis-left-1 {
+                position: relative;
+                top: 1em;
+                height: 11em;
+            }
+    
+        }
+    }
+    
+    
+    
+    // -------------------------------- Wearables
+    
+    .explore-raster-right {
+    
+
+        position: absolute;
+        top: 27em;
+        width: 100%;
+        height: 50%;
+        right: 0em;
+        text-align: center;
+    
+        .explore-title-right {
+    
+            .explore-wearables {
+                font-size: 1.5em;
+                transition: 0.5s;
+            }
+    
+        }
+    
+        .wearables-raster-right {
+            .wearables-right-1 {
+                top: 1.5em;
+                height: 8.45em;
+            }
+    
+        }
+    
+    }
+
+
+    
+
+}
+
+@media(max-width:$actual-mobile) {
+
+    .explore-raster-left {
+
+        position: absolute;
+        top: 8em;
+        width: 100%;
+        height: 50%;
+        left: 0em;
+        text-align: center;
+    
+        .explore-title-left {
+    
+            .explore-gotchis {
+                font-size: 1.25em;
+                transition: 0.5s;
+            }
+        }
+    
+        .gotchis-raster-left {
+    
+            .gotchis-left-1 {
+                position: relative;
+                top: 0.7em;
+                height: 8.25em;
+            }
+    
+        }
+    }
+    
+    
+    
+    // -------------------------------- Wearables
+    
+    .explore-raster-right {
+    
+
+        position: absolute;
+        top: 22.75em;
+        width: 100%;
+        height: 50%;
+        right: 0em;
+        text-align: center;
+    
+        .explore-title-right {
+    
+            .explore-wearables {
+                font-size: 1.25em;
+                transition: 0.5s;
+            }
+    
+        }
+    
+        .wearables-raster-right {
+            .wearables-right-1 {
+                top: 1.1em;
+                height: 6.5em;
+            }
+    
+        }
+    
+    }
+
+
+}
+
+
+
+
+
+
+// ---------------------------------------------------------------------------------- EXPLORE GOTCHI PAGE
 // ---------------------------------------------------------------------------------- 
 // ---------------------------------------------------------------------------------- 
 
@@ -387,7 +809,7 @@ header {
 
 // Very small Screen | Remove Axes
 
-@media(max-width:$mobile-screen) {
+@media(max-width:$ipad-screen) {
 
     .gotchi-raster-left {
 

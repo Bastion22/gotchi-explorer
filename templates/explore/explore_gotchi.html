@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+
+<!--  THIS WAS THE ENTER GOTCHI ID BUTTON, but is now replaced beneath
+<div class="top-raster-home">
+    <div class="top-sub-raster-home">
+
+      <button class="input-group-text" type="submit" id="submit_btn">Enter Gotchi ID</button>
+
+    </div>
+</div> -->
+
+
+
+<div class="main-raster-home" id="my_form">
+    <div class="main-sub-raster-home">
+        <form method="post" action="{% url 'explore_gotchi' %}" class="form-class">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="input-group-text" type="submit" id="submit_btn">Enter Gotchi ID</button>
+    </div>
+</div>
+
+<script>
+  const form = document.querySelector('#my_form');
+  const submitBtn = document.querySelector('#submit_btn');
+  submitBtn.addEventListener('click', () => {
+    form.submit();
+  });
+</script>
+
+<div class="gotchi-raster-left">
+  <img class="gotchi-left" src="/static/images/Brand/gotchis/ethKnight.svg" alt="gotchi-left.svg">
+  <img class="medium-left" src="/static/images/Brand/wearables/portalAxe.svg" alt="portal-axe-left.svg">
+  <img class="mobile-left" src="/static/images/Brand/wearables/pitchfork.svg" alt="staff-left.svg">
+</div>
+
+<div class="gotchi-raster-right">
+  <img class="gotchi-right" src="/static/images/Brand/gotchis/yfiMonocle.svg" alt="gotchi-right.svg">
+  <img class="medium-right" src="/static/images/Brand/wearables/portalAxe.svg" alt="portal-axe-right.svg">
+  <img class="mobile-right" src="/static/images/Brand/wearables/pitchfork.svg" alt="staff-right.svg">
+</div>
+
+  <!-- <div class="gotchi-raster-bottom">
+    <img class="gotchi-bottom" src="static/images/Brand/wearables/susButt.svg" alt="gotchi-bottom.svg">
+  </div> -->
+  
+
+
+
+{% endblock %}
