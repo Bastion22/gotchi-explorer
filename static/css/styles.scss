@@ -862,7 +862,7 @@ header {
 
 .modal {
     position: fixed;
-    top: 12.5em !important;
+    top: 11.65em !important;
     padding: 0em 3.5em 0em 3.5em;
     z-index: 1050;
     width: 100%;
@@ -985,6 +985,33 @@ header {
             text-align: center !important;
             width: 10em;
             height: 2.4em;
+        }
+    }
+
+
+    .modal {
+        position: fixed;
+        top: 10.5em !important;
+        padding: 0em 3.5em 0em 3.5em;
+        z-index: 1050;
+        width: 100%;
+        height: 100%;
+        outline: 0;
+    
+        .modal-dialog {
+            // does nothing
+            .modal-content {
+                min-height: 20em;
+                .modal-header {
+                    .modal-title {
+                        font-size: 1em;
+                    }   
+                }
+
+                .modal-body {
+                    font-size: 0.8em;
+                }
+            }
         }
     }
 
