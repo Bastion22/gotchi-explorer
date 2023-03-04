@@ -953,24 +953,48 @@ header {
 }
 .portal-master {
   position: relative;
-  top: 10.5em;
+  top: 11.75em;
   height: 50%;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 .portal-master .closed-portal {
-  height: 21em;
+  height: 18.5em;
 }
 
 .not-summoned-master {
   position: relative;
-  top: 12.5em;
+  top: 14em;
   display: flex;
   justify-content: center;
 }
 .not-summoned-master .not-summoned-text {
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.15em;
   font-weight: 700;
+}
+
+@media (max-width: 459px) {
+  .portal-master {
+    top: 9.05em;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .portal-master .closed-portal {
+    height: 15em;
+  }
+  .not-summoned-master {
+    position: relative;
+    top: 11.1em;
+    display: flex;
+    justify-content: center;
+  }
+  .not-summoned-master .not-summoned-text {
+    text-align: center;
+    font-size: 0.95em;
+    font-weight: 700;
+  }
 }/*# sourceMappingURL=styles.css.map */
