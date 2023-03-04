@@ -608,14 +608,14 @@ header {
 @media (max-width: 459px) {
   .master-stats-focus {
     position: relative;
-    top: 14.75em;
+    top: 14em;
     height: 5.25em;
     display: flex;
     justify-content: center;
   }
   .stats-page {
     position: relative;
-    top: 16em;
+    top: 15.25em;
     display: flex;
     justify-content: center;
   }
@@ -624,14 +624,14 @@ header {
     height: 2.1em;
   }
   .curve-numbers {
-    top: 15.75em;
+    top: 15em;
   }
   .curve-numbers .stat-number-under-curve {
     width: 4em;
     font-size: 1em;
   }
   .stats-explanation {
-    top: 14em;
+    top: 13.25em;
   }
   .stats-explanation .left-of-curve {
     margin-right: 1.3em !important;
