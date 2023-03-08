@@ -8,16 +8,16 @@
 
 <div class="master-wearable">
 
-        {% for svg_data in return_svg %}
+        {% for wearable_svg_data in return_svg %}
 
-                <svg class="wearable-itself">{{ svg_data |safe }}</svg>
+            <svg class="wearable-itself">{{ wearable_svg_data | safe }}</svg>
 
         {% endfor %}
 
 </div>
 
 
-<div class="stats-img-master">
+<!-- <div class="stats-img-master">
     <a href="http://gotchiexplorer.com/nrg/"><img class="stats-img" src="/static/images/stats/nrg.png" alt="nrg.png"></a>
     <a href="http://gotchiexplorer.com/agg/"><img class="stats-img" src="/static/images/stats/agg.png" alt="agg.png"></a>
     <a href="http://gotchiexplorer.com/spk/"><img class="stats-img" src="/static/images/stats/spk.png" alt="spk.png"></a>
@@ -35,11 +35,7 @@
     <a href="http://gotchiexplorer.com/brn/"><button class="stats-text">{{ text_stat_list.3 }}</button></a>
     <a href="http://gotchiexplorer.com/eys/"><button class="stats-text">{{ text_stat_list.4 }}</button></a>
     <a href="http://gotchiexplorer.com/eyc/"><button class="stats-text">{{ text_stat_list.5 }}</button></a>
-
-    <!-- {% for stat in text_stat_list %}
-    <button class="stats-text">{{ stat }}</button>
-    {% endfor %} -->
-</div>
+</div> -->
 
 
 {% endblock %}

@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 
 from .forms import GotchiForm
 from .forms import WearableForm
-from .scrapers.gotchi_scraper import GotchiScraper
+from .scrapers.gotchi.gotchi_scraper import GotchiScraper
+from .scrapers.wearable.wearable_scraper import WearableScraper
 
 # Create your views here.
 
@@ -48,6 +49,7 @@ def explore_wearable_view(request):
     if request.method == 'POST':
         wearable_id = request.POST.get('wearable_id')
         context['wearable_id'] = wearable_id
+        
         return redirect('wearable_url', wearable_id=wearable_id)
     
     return render(request, 'explore/explore_wearable.html', context)
@@ -73,8 +75,7 @@ def gotchi_view(request, gotchi_id):
 def wearable_view(request, wearable_id):
     
     try:
-        wearable_obj = GotchiScraper(wearable_id) # Initialize
-        return_modifications = wearable_obj.get_stats() # Call
+        wearable_obj = WearableScraper(wearable_id) # Initialize
         return_svg = wearable_obj.get_svg() # Call
         
     except:
@@ -82,9 +83,9 @@ def wearable_view(request, wearable_id):
         
     context = {
         # 'svg_list': svg_data_list,
-        'text_stat_list': return_modifications,
         'return_svg': return_svg,
     }
+    
     return render(request, 'wearable.html', context=context)  
 
 

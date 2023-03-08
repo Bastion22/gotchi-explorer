@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% include 'back_button.html' %}
+
+<div class="portal-master">
+    <img class="closed-portal" src="/static/images/Brand/portals/h1Closed.svg" alt="h1Closed.svg">
+</div>
+
+<div class="not-summoned-master">
+    <p class="not-summoned-text">Wearable #{{ id }} is yet to be summoned!</p>
+
+
+</div>
+
+{% endblock %}

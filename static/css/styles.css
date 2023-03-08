@@ -884,6 +884,18 @@ header {
     font-size: 0.8em;
   }
 }
+.master-wearable {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  top: 15em;
+}
+.master-wearable .wearable-itself {
+  position: relative;
+  height: 15em;
+}
+
 .about-text-1 {
   position: absolute;
   top: 11.5em;
