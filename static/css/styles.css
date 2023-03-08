@@ -377,6 +377,22 @@ header {
   transition: 1.5s;
   border-radius: 5px;
 }
+.main-raster-home .main-sub-raster-home .form-class .errorlist {
+  position: absolute;
+  width: 100%;
+  text-align: center !important;
+  padding: 0;
+  margin: 0;
+}
+.main-raster-home .main-sub-raster-home .form-class .errorlist li {
+  list-style: none;
+  width: 100%;
+  position: absolute;
+  bottom: 4.5em;
+  text-decoration: none;
+  color: #727272;
+  text-align: center;
+}
 .main-raster-home .main-sub-raster-home .form-class .form-control {
   display: block;
   border: 1px solid #d8d7d7;
@@ -892,8 +908,8 @@ header {
   top: 15em;
 }
 .master-wearable .wearable-itself {
-  position: relative;
-  height: 15em;
+  position: absolute;
+  top: 2.5em;
 }
 
 .about-text-1 {

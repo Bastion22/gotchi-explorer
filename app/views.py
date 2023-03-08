@@ -10,47 +10,60 @@ from .scrapers.wearable.wearable_scraper import WearableScraper
 def home_view(request):
     return render(request, 'home.html')
 
+# def explore_gotchi_view(request):
+#     form = GotchiForm(request.POST or None)
+    
+#     context = {}
+    
+#     if form.is_valid():
+#         id_input = form.cleaned_data['gotchi_id']
+#         context['id_input'] = id_input
+#         form = GotchiForm()
+        
+#     context['form'] = form
+    
+#     if request.method == 'POST':
+#         gotchi_id = request.POST.get('gotchi_id')
+        
+#         try:
+#             gotchi_id_int = int(gotchi_id)
+#             context['gotchi_id'] = gotchi_id_int
+#             return redirect('gotchi_url', gotchi_id=gotchi_id_int)
+        
+#         except ValueError:
+#             form.add_error('gotchi_id', 'Gotchi ID must be Integer')
+    
+#     return render(request, 'explore/explore_gotchi.html', context)
+
 def explore_gotchi_view(request):
     form = GotchiForm(request.POST or None)
     
-    context = {
+    if request.method == 'POST':
+        if form.is_valid():
+            gotchi_id = form.cleaned_data['gotchi_id']
+            return redirect('gotchi_url', gotchi_id=gotchi_id)
         
+    context = {
+        'form': form,
     }
     
-    if form.is_valid():
-        id_input = form.cleaned_data['gotchi_id']
-        context['id_input'] = id_input
-        form = GotchiForm()
-        
-    context['form'] = form
-    
-    if request.method == 'POST':
-        gotchi_id = request.POST.get('gotchi_id')
-        context['gotchi_id'] = gotchi_id
-        return redirect('gotchi_url', gotchi_id=gotchi_id)
     
     return render(request, 'explore/explore_gotchi.html', context)
 
 
 def explore_wearable_view(request):
     form = WearableForm(request.POST or None)
-    
-    context = {
-        
-    }
-    
-    if form.is_valid():
-        id_input = form.cleaned_data['wearable_id']
-        context['id_input'] = id_input
-        form = WearableForm()
-        
-    context['form'] = form
+
     
     if request.method == 'POST':
-        wearable_id = request.POST.get('wearable_id')
-        context['wearable_id'] = wearable_id
+        if form.is_valid():
+            wearable_id = form.cleaned_data['wearable_id']
+            return redirect('wearable_url', wearable_id=wearable_id)
+    
         
-        return redirect('wearable_url', wearable_id=wearable_id)
+    context = {
+        'form': form,
+        }
     
     return render(request, 'explore/explore_wearable.html', context)
 

@@ -624,6 +624,7 @@ header {
 
 // Form
 
+
 .main-raster-home {
     position: absolute;
     top: 25.25em;
@@ -633,6 +634,7 @@ header {
         padding: 0em 8em 0em 8em !important;
         display: flex;
         justify-content: center;
+
 
         .input-group-text {
             position: absolute;
@@ -666,6 +668,24 @@ header {
             // justify-content: center;
             // width: 15em;
             border-radius: 5px;
+
+            .errorlist {
+                position: absolute;
+                width: 100%;
+                text-align: center !important;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    list-style: none;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 4.5em;
+                    text-decoration: none;
+                    color: #727272;
+                    text-align: center;
+                }
+            }
             
             .form-control {
                 display: block;
@@ -1453,9 +1473,8 @@ header {
     top: 15em;
 
     .wearable-itself {
-        position: relative;
-
-        height: 15em;
+        position: absolute;
+        top: 2.5em;
 
     }
 

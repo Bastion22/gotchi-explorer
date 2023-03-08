@@ -16,11 +16,16 @@
 
 
 
-
 <div class="main-raster-home" id="my_form">
     <div class="main-sub-raster-home">
         <form method="post" action="{% url 'explore_gotchi' %}" class="form-class">
         {% csrf_token %}
+        {% if field.errors %}
+          {% for error in field.errors %}
+
+            {{ error }}
+          {% endfor %}
+        {% endif %}
         {{ form.as_p }}
         <button class="input-group-text" type="submit" id="submit_btn">Enter Gotchi ID</button>
     </div>
