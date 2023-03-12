@@ -931,6 +931,17 @@ header {
   font-style: italic;
 }
 
+@media (max-width: 459px) {
+  .master-wearable .wearable-itself {
+    position: absolute;
+    top: 0.5em;
+    height: 5em;
+  }
+  .master-wearable .wearable-name {
+    top: 8em;
+    font-size: 1.15em;
+  }
+}
 .about-text-1 {
   position: absolute;
   top: 11.5em;

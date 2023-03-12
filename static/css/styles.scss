@@ -1514,6 +1514,26 @@ header {
 
 // .wearable-name-master
 
+@media(max-width:$actual-mobile) {
+
+    .master-wearable {
+
+
+        .wearable-itself {
+            position: absolute;
+            top: 0.5em;
+            height: 5em;
+        }
+
+        .wearable-name {
+            top: 8em;
+            font-size: 1.15em;
+        }
+
+    }
+
+}
+
 
 // ---------------------------------------------------------------------------------- ABOUT PAGE
 // ---------------------------------------------------------------------------------- 
