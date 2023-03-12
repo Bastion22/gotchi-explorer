@@ -970,26 +970,41 @@ header {
 
 
 .master-gotchi {
-    display: flex;
-    justify-content: center;
-    
 
-    .gotchi-himself {
-        position: absolute;
-        height: 18em;
-        width: 18em;
-        top: 13.5em;
-        background: #ffffff;
-    
 
-        .gotchi-bg {
-            display: none;
+
+    .gotchi-link {
+
+        display: flex;
+        justify-content: center;
+
+        .gotchi-himself {
+            position: absolute;
+            height: 18em;
+            width: 18em;
+            top: 13.5em;
+            background: #ffffff;
+        
+    
+            .gotchi-bg {
+                display: none;
+            }
+    
+            filter: drop-shadow(0px 2px 2px $dark-grey);
+            transition: 0.2s;
+    
+    
         }
 
-        filter: drop-shadow(0px 2px 2.5px $dark-grey);
+        .gotchi-himself:hover {
 
+            filter: drop-shadow(0px 2px 3px $carbon-black);
+            transition: 0.2s;
+
+        }
 
     }
+    
 }
 
 .stats-img-master {
@@ -1474,11 +1489,30 @@ header {
 
     .wearable-itself {
         position: absolute;
-        top: 2.5em;
+        top: 3em;
+        height: 10em;
+        filter: drop-shadow(0px 2px 2px $dark-grey);
+        transition: 0.2s;
 
     }
 
+    .wearable-itself:hover {
+
+        filter: drop-shadow(0px 2px 3px $carbon-black);
+        transition: 0.2s;
+        cursor: pointer;
+
+    }
+
+    .wearable-name {
+        position: absolute;
+        top: 12.25em;
+        font-size: 1.25em;
+        font-style: italic;
+    }
 }
+
+// .wearable-name-master
 
 
 // ---------------------------------------------------------------------------------- ABOUT PAGE

@@ -80,7 +80,8 @@ def gotchi_view(request, gotchi_id):
         
     context = {
         # 'svg_list': svg_data_list,
-        'text_stat_list': return_stats,
+        'gotchi_id': gotchi_id,
+        'return_stats': return_stats,
         'return_svg': return_svg,
     }
     return render(request, 'gotchi.html', context=context)  
@@ -89,7 +90,9 @@ def wearable_view(request, wearable_id):
     
     try:
         wearable_obj = WearableScraper(wearable_id) # Initialize
-        return_svg = wearable_obj.get_svg() # Call
+        return_svg = wearable_obj.get_svg() # Call get_svg
+        return_name = wearable_obj.get_name() # Call get_name
+        return_trait_modifiers = wearable_obj.get_trait_modifiers()
         
     except:
         return render(request, 'errors/wearable_not_found.html', {'id': wearable_id})
@@ -97,6 +100,8 @@ def wearable_view(request, wearable_id):
     context = {
         # 'svg_list': svg_data_list,
         'return_svg': return_svg,
+        'return_name': return_name,
+        'return_trait_modifiers': return_trait_modifiers,
     }
     
     return render(request, 'wearable.html', context=context)  

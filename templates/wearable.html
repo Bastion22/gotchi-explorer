@@ -14,28 +14,33 @@
 
         {% endfor %}
 
+        <a class="wearable-name">{{ return_name }}</a>
+
 </div>
 
 
-<!-- <div class="stats-img-master">
+
+<div class="stats-img-master">
+
     <a href="http://gotchiexplorer.com/nrg/"><img class="stats-img" src="/static/images/stats/nrg.png" alt="nrg.png"></a>
     <a href="http://gotchiexplorer.com/agg/"><img class="stats-img" src="/static/images/stats/agg.png" alt="agg.png"></a>
     <a href="http://gotchiexplorer.com/spk/"><img class="stats-img" src="/static/images/stats/spk.png" alt="spk.png"></a>
     <a href="http://gotchiexplorer.com/brn/"><img class="stats-img" src="/static/images/stats/brn.png" alt="brn.png"></a>
-    <a href="http://gotchiexplorer.com/eys/"><img class="stats-img" src="/static/images/stats/eys.png" alt="eys.png"></a>
-    <a href="http://gotchiexplorer.com/eyc/"><img class="stats-img" src="/static/images/stats/eyc.png" alt="eyc.png"></a>
+    <!-- <a href="http://gotchiexplorer.com/eys/"><img class="stats-img" src="/static/images/stats/eys.png" alt="eys.png"></a>
+    <a href="http://gotchiexplorer.com/eyc/"><img class="stats-img" src="/static/images/stats/eyc.png" alt="eyc.png"></a> -->
 
 </div>
 
 
 <div class="stats-text-master">
-    <a href="http://gotchiexplorer.com/nrg/"><button class="stats-text">{{ text_stat_list.0 }}</button></a>
-    <a href="http://gotchiexplorer.com/agg/"><button class="stats-text">{{ text_stat_list.1 }}</button></a>
-    <a href="http://gotchiexplorer.com/spk/"><button class="stats-text">{{ text_stat_list.2 }}</button></a>
-    <a href="http://gotchiexplorer.com/brn/"><button class="stats-text">{{ text_stat_list.3 }}</button></a>
-    <a href="http://gotchiexplorer.com/eys/"><button class="stats-text">{{ text_stat_list.4 }}</button></a>
-    <a href="http://gotchiexplorer.com/eyc/"><button class="stats-text">{{ text_stat_list.5 }}</button></a>
-</div> -->
+    <a href="http://gotchiexplorer.com/nrg/"><button class="stats-text">{{ return_trait_modifiers.0 }}</button></a>
+    <a href="http://gotchiexplorer.com/agg/"><button class="stats-text">{{ return_trait_modifiers.1 }}</button></a>
+    <a href="http://gotchiexplorer.com/spk/"><button class="stats-text">{{ return_trait_modifiers.2 }}</button></a>
+    <a href="http://gotchiexplorer.com/brn/"><button class="stats-text">{{ return_trait_modifiers.3 }}</button></a>
+    <!-- <a href="http://gotchiexplorer.com/eys/"><button class="stats-text">{{ return_trait_modifiers.4 }}</button></a>
+    <a href="http://gotchiexplorer.com/eyc/"><button class="stats-text">{{ return_trait_modifiers.5 }}</button></a> -->
+
+</div>
 
 
 {% endblock %}

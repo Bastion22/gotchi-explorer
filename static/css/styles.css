@@ -527,20 +527,25 @@ header {
     transition: 1.5s;
   }
 }
-.master-gotchi {
+.master-gotchi .gotchi-link {
   display: flex;
   justify-content: center;
 }
-.master-gotchi .gotchi-himself {
+.master-gotchi .gotchi-link .gotchi-himself {
   position: absolute;
   height: 18em;
   width: 18em;
   top: 13.5em;
   background: #ffffff;
-  filter: drop-shadow(0px 2px 2.5px #727272);
+  filter: drop-shadow(0px 2px 2px #727272);
+  transition: 0.2s;
 }
-.master-gotchi .gotchi-himself .gotchi-bg {
+.master-gotchi .gotchi-link .gotchi-himself .gotchi-bg {
   display: none;
+}
+.master-gotchi .gotchi-link .gotchi-himself:hover {
+  filter: drop-shadow(0px 2px 3px #3d3d3d);
+  transition: 0.2s;
 }
 
 .stats-img-master {
@@ -909,7 +914,21 @@ header {
 }
 .master-wearable .wearable-itself {
   position: absolute;
-  top: 2.5em;
+  top: 3em;
+  height: 10em;
+  filter: drop-shadow(0px 2px 2px #727272);
+  transition: 0.2s;
+}
+.master-wearable .wearable-itself:hover {
+  filter: drop-shadow(0px 2px 3px #3d3d3d);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.master-wearable .wearable-name {
+  position: absolute;
+  top: 12.25em;
+  font-size: 1.25em;
+  font-style: italic;
 }
 
 .about-text-1 {

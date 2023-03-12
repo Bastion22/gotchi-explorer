@@ -10,7 +10,7 @@
 
         {% for svg_data in return_svg %}
 
-                <svg class="gotchi-himself" style="background: none;">{{ svg_data |safe }}</svg>
+                <a class="gotchi-link" href="https://app.aavegotchi.com/gotchi/{{ gotchi_id }}" target="_blank"><svg class="gotchi-himself" style="background: none;">{{ svg_data |safe }}</svg></a>
 
         {% endfor %}
 
@@ -30,16 +30,13 @@
 
 
 <div class="stats-text-master">
-    <a href="http://gotchiexplorer.com/nrg/"><button class="stats-text">{{ text_stat_list.0 }}</button></a>
-    <a href="http://gotchiexplorer.com/agg/"><button class="stats-text">{{ text_stat_list.1 }}</button></a>
-    <a href="http://gotchiexplorer.com/spk/"><button class="stats-text">{{ text_stat_list.2 }}</button></a>
-    <a href="http://gotchiexplorer.com/brn/"><button class="stats-text">{{ text_stat_list.3 }}</button></a>
-    <a href="http://gotchiexplorer.com/eys/"><button class="stats-text">{{ text_stat_list.4 }}</button></a>
-    <a href="http://gotchiexplorer.com/eyc/"><button class="stats-text">{{ text_stat_list.5 }}</button></a>
+    <a href="http://gotchiexplorer.com/nrg/"><button class="stats-text">{{ return_stats.0 }}</button></a>
+    <a href="http://gotchiexplorer.com/agg/"><button class="stats-text">{{ return_stats.1 }}</button></a>
+    <a href="http://gotchiexplorer.com/spk/"><button class="stats-text">{{ return_stats.2 }}</button></a>
+    <a href="http://gotchiexplorer.com/brn/"><button class="stats-text">{{ return_stats.3 }}</button></a>
+    <a href="http://gotchiexplorer.com/eys/"><button class="stats-text">{{ return_stats.4 }}</button></a>
+    <a href="http://gotchiexplorer.com/eyc/"><button class="stats-text">{{ return_stats.5 }}</button></a>
 
-    <!-- {% for stat in text_stat_list %}
-    <button class="stats-text">{{ stat }}</button>
-    {% endfor %} -->
 </div>
 
 

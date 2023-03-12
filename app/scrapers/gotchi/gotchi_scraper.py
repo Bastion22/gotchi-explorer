@@ -10,10 +10,10 @@ class GotchiScraper:
     def get_stats(self): # Get Gotchi Stats
 
         query = f'''{{
-        aavegotchi(id: {self.gotchi_id}) {{
-            modifiedNumericTraits
-        }}
-        }}'''
+            aavegotchi(id: {self.gotchi_id}) {{
+                modifiedNumericTraits
+            }}
+            }}'''
 
         url = 'https://subgraph.satsuma-prod.com/tWYl5n5y04oz/aavegotchi/aavegotchi-core-matic/api'
         r = requests.post(url, json={'query': query})
