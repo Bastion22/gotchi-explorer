@@ -1,9 +1,21 @@
+import json
+
 from django.shortcuts import render, redirect
 
 from .forms import GotchiForm
 from .forms import WearableForm
 from .scrapers.gotchi.gotchi_scraper import GotchiScraper
 from .scrapers.wearable.wearable_scraper import WearableScraper
+
+
+import os
+
+# Navigate up one level from current directory
+parent_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
+
+# Access the folder you need to import from
+folder_path = os.path.join(parent_dir, 'gotchitraits', 'app', 'data_libraries', 'portal_supply')
+
 
 # Create your views here.
 
@@ -87,7 +99,19 @@ def tools_view(request):
 
 def portal_counter_view(request):
     
-    return render(request, 'tools/tool_list/portals.html')
+    
+    with open(os.path.join(folder_path, 'h1_supply.json'), 'r') as f:
+        h1_portals = json.load(f)
+        
+    with open(os.path.join(folder_path, 'h2_supply.json'), 'r') as f:
+        h2_portals = json.load(f)
+    
+    context = {
+        'h1_portals': h1_portals,
+        'h2_portals': h2_portals,
+    } 
+    
+    return render(request, 'tools/tool_list/portals.html', context=context)
 
 
 
