@@ -26,7 +26,7 @@ urlpatterns = [
     
     path('tools/', tools_view, name='tools_view'),
     
-    path('tools/portalCounter', portal_counter_view, name='portal_counter_view'),
+    path('tools/portalCounter/', portal_counter_view, name='portal_counter_view'),
     
     path('about/', about_view, name='about_view'),
     path('contact/', contact_view, name='contact_view'),
