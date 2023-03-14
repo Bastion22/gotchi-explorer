@@ -10,30 +10,6 @@ from .scrapers.wearable.wearable_scraper import WearableScraper
 def home_view(request):
     return render(request, 'home.html')
 
-# def explore_gotchi_view(request):
-#     form = GotchiForm(request.POST or None)
-    
-#     context = {}
-    
-#     if form.is_valid():
-#         id_input = form.cleaned_data['gotchi_id']
-#         context['id_input'] = id_input
-#         form = GotchiForm()
-        
-#     context['form'] = form
-    
-#     if request.method == 'POST':
-#         gotchi_id = request.POST.get('gotchi_id')
-        
-#         try:
-#             gotchi_id_int = int(gotchi_id)
-#             context['gotchi_id'] = gotchi_id_int
-#             return redirect('gotchi_url', gotchi_id=gotchi_id_int)
-        
-#         except ValueError:
-#             form.add_error('gotchi_id', 'Gotchi ID must be Integer')
-    
-#     return render(request, 'explore/explore_gotchi.html', context)
 
 def explore_gotchi_view(request):
     form = GotchiForm(request.POST or None)
@@ -47,20 +23,17 @@ def explore_gotchi_view(request):
         'form': form,
     }
     
-    
     return render(request, 'explore/explore_gotchi.html', context)
 
 
 def explore_wearable_view(request):
     form = WearableForm(request.POST or None)
 
-    
     if request.method == 'POST':
         if form.is_valid():
             wearable_id = form.cleaned_data['wearable_id']
             return redirect('wearable_url', wearable_id=wearable_id)
-    
-        
+       
     context = {
         'form': form,
         }
@@ -86,6 +59,7 @@ def gotchi_view(request, gotchi_id):
     }
     return render(request, 'gotchi.html', context=context)  
 
+
 def wearable_view(request, wearable_id):
     
     try:
@@ -105,6 +79,17 @@ def wearable_view(request, wearable_id):
     }
     
     return render(request, 'wearable.html', context=context)  
+
+def tools_view(request):
+    
+    return render(request, 'tools/tools.html')
+
+
+def portal_counter_view(request):
+    
+    return render(request, 'tools/tool_list/portals.html')
+
+
 
 
 def about_view(request):

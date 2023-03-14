@@ -74,6 +74,7 @@ header {
         .nav-item {
             display: flex;
             list-style: none;
+            z-index: 9;
 
 
             a {
@@ -129,6 +130,7 @@ header {
         visibility: hidden; // Fade Out Cacti - After Closing Sword Tab
         opacity: 0;
         transition: visibility 0s 0.1s, opacity 0.1s linear;  
+
     }
 
     .hamburger.active .menu-sword:nth-child(2) {
@@ -136,6 +138,7 @@ header {
         opacity: 1;
         transition: opacity 0.4s linear;
         transform: translate(13px) rotate(45deg);
+        z-index: 99;
 
         
     }
@@ -145,6 +148,7 @@ header {
         opacity: 1;
         transition: opacity 0.4s linear;
         transform: translate(-13px) rotate(-45deg);
+        z-index: 99;
 
     }
     
@@ -176,13 +180,14 @@ header {
     }
 
 
-    .nav-menu.active {
+    .nav-menu.active { // Vertical Menu
         // left: -1em;
         position: absolute;
         width: 100%;
         top: 1.75em;
         left: 0em;
-        height: 10.6em;
+        // height: 10.6em; // Height Of Nav Block Black
+        height: 13em;
         background-color: $carbon-black;
         display: block !important;
         // top: 20px;
@@ -199,7 +204,8 @@ header {
             position: relative;
             right: 1.5em;
             justify-content: center;
-            padding: 0.175em 0em 0em 0em;
+            padding: 0.17em 0em 0em 0em; // Vertical Space Between Vertical Menu options
+            font-size: 0.95em; // Font Size Vertical Menu
             opacity: 1;
             width: 100%;
             transition: opacity 0.25s linear;
@@ -208,8 +214,19 @@ header {
 
     .nav-logo {
         left: 2em !important;
+        width: 5em !important;
     }
 }
+
+@media(max-width:$actual-mobile) {
+
+    .nav-logo {
+        width: 4.5em !important;
+    }
+
+}
+
+
 
 // ---------------------------------------------------------------------------------- HOME PAGE
 // ---------------------------------------------------------------------------------- 
@@ -1128,9 +1145,9 @@ header {
         
     
         .gotchi-himself {
-            height: 13.5em;
-            width: 13.5em;
-            top: 11.8em;
+            height: 13.5em !important;
+            width: 13.5em !important;
+            top: 12.25em !important;
             // background: #ffffff;
             // box-shadow: 0px 2px 12px -4px $carbon-black;
         }
@@ -1138,7 +1155,7 @@ header {
 
 
     .stats-img-master {
-        top: 27.25em;
+        top: 27.5em;
 
     
         .stats-img {
@@ -1153,7 +1170,7 @@ header {
     }
     
     .stats-text-master {
-        top: 30.85em;
+        top: 31em;
     
         .stats-text {
             min-height: 2.5em;
@@ -1560,6 +1577,182 @@ header {
 
 }
 
+
+// ---------------------------------------------------------------------------------- TOOLS PAGE
+// ---------------------------------------------------------------------------------- 
+// ---------------------------------------------------------------------------------- 
+
+
+.tools-menu-master {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    .tools-portal-counter {
+        position: absolute;
+        top: 1em;
+        display: block;
+        margin: 0em 2em 0em 2em; // Space Between Menu Options
+
+        .tools-portal-counter-icon {
+            position: relative;
+            top: 10em;
+            height: 15em;
+            filter: drop-shadow(0px 0px 3.5px $dark-grey);
+            transition: 0.2s;
+        }
+
+        .tools-portal-counter-icon:hover {
+            content: url(/static/images/Brand/portals/h1Opened.gif);
+            filter: drop-shadow(0px 0px 25px #6f10a2);
+            transition: 1s;
+
+        }
+
+
+        
+        .tools-portal-counter-text {
+            position: relative;
+            top: 5.75em;
+            font-size: 2em;
+            text-align: center;
+            cursor: pointer;
+
+            color: $carbon-black;
+            transition: 0.2s;
+        }
+
+    }
+
+}
+
+@media(max-width:$medium-screen) {
+
+    .tools-menu-master {
+        .tools-portal-counter {
+
+            .tools-portal-counter-icon {
+                top: 9em;
+                height: 12.5em;
+                transition: 0.2s;
+            }
+
+            .tools-portal-counter-text {
+                top: 6.25em;
+                font-size: 1.65em;
+                transition: 0.2s;
+            }
+        }
+    }
+
+}
+
+
+@media(max-width:$actual-mobile) {
+
+    .tools-menu-master {
+        .tools-portal-counter {
+            top: 2.5em;
+            transition: 0.2s;
+
+            .tools-portal-counter-icon {
+                top: 7.5em;
+                height: 10em;
+                transition: 0.2s;
+            }
+
+            .tools-portal-counter-text {
+                top: 6.25em;
+                font-size: 1.35em;
+                transition: 0.2s;
+            }
+        }
+    }
+
+}
+
+// ---------------------------------------------------------------------------------- TOOLS - PORTAL COUNTER
+// ---------------------------------------------------------------------------------- 
+// ---------------------------------------------------------------------------------- 
+
+.portal-counter-master {
+
+    position: absolute;
+    top: 26em;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+
+    .h1-counter {
+        position: absolute;
+        left: 5em;
+        width: 50%;
+        height: 50%;
+        display: block;
+
+        .h1-counter-icon {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 15em;
+            filter: drop-shadow(0px 0px 3.5px $dark-grey);
+            transition: 0.2s;
+        }
+
+        
+        .h1-counter-text {
+            position: absolute;
+            top: 5em;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            text-align: center;
+            cursor: pointer;
+
+
+            color: $carbon-black;
+            transition: 0.2s;
+        }
+
+    }
+    .h2-counter {
+
+        position: absolute;
+        right: 5em;
+        width: 50%;
+        height: 50%;
+        display: block;
+
+        .h2-counter-icon {
+            position: absolute;
+            // top: 22.5em;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 15em;
+            filter: drop-shadow(0px 0px 3.5px $dark-grey);
+            transition: 0.2s;
+        }
+
+        
+        .h2-counter-text {
+            position: absolute;
+            top: 5em;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            text-align: center;
+            cursor: pointer;
+
+            color: $carbon-black;
+            transition: 0.2s;
+        }
+    }
+
+}
 
 // ---------------------------------------------------------------------------------- ABOUT PAGE
 // ---------------------------------------------------------------------------------- 

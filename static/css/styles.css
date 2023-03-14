@@ -36,6 +36,7 @@ header {
 .navbar .nav-menu .nav-item {
   display: flex;
   list-style: none;
+  z-index: 9;
 }
 .navbar .nav-menu .nav-item a {
   color: #ffffff;
@@ -81,12 +82,14 @@ header {
     opacity: 1;
     transition: opacity 0.4s linear;
     transform: translate(13px) rotate(45deg);
+    z-index: 99;
   }
   .hamburger.active .menu-sword:nth-child(3) {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.4s linear;
     transform: translate(-13px) rotate(-45deg);
+    z-index: 99;
   }
   .nav-menu {
     position: absolute;
@@ -111,7 +114,7 @@ header {
     width: 100%;
     top: 1.75em;
     left: 0em;
-    height: 10.6em;
+    height: 13em;
     background-color: #3d3d3d;
     display: block !important;
     width: 100%;
@@ -122,13 +125,20 @@ header {
     position: relative;
     right: 1.5em;
     justify-content: center;
-    padding: 0.175em 0em 0em 0em;
+    padding: 0.17em 0em 0em 0em;
+    font-size: 0.95em;
     opacity: 1;
     width: 100%;
     transition: opacity 0.25s linear;
   }
   .nav-logo {
     left: 2em !important;
+    width: 5em !important;
+  }
+}
+@media (max-width: 459px) {
+  .nav-logo {
+    width: 4.5em !important;
   }
 }
 .explore-raster-left {
@@ -643,12 +653,12 @@ header {
 
 @media (max-width: 459px) {
   .master-gotchi .gotchi-himself {
-    height: 13.5em;
-    width: 13.5em;
-    top: 11.8em;
+    height: 13.5em !important;
+    width: 13.5em !important;
+    top: 12.25em !important;
   }
   .stats-img-master {
-    top: 27.25em;
+    top: 27.5em;
   }
   .stats-img-master .stats-img {
     margin: 0em 0.25em 0em 0.25em;
@@ -657,7 +667,7 @@ header {
     transition: 1s;
   }
   .stats-text-master {
-    top: 30.85em;
+    top: 31em;
   }
   .stats-text-master .stats-text {
     min-height: 2.5em;
@@ -961,6 +971,130 @@ header {
     font-size: 1.15em;
   }
 }
+.tools-menu-master {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.tools-menu-master .tools-portal-counter {
+  position: absolute;
+  top: 1em;
+  display: block;
+  margin: 0em 2em 0em 2em;
+}
+.tools-menu-master .tools-portal-counter .tools-portal-counter-icon {
+  position: relative;
+  top: 10em;
+  height: 15em;
+  filter: drop-shadow(0px 0px 3.5px #727272);
+  transition: 0.2s;
+}
+.tools-menu-master .tools-portal-counter .tools-portal-counter-icon:hover {
+  content: url(/static/images/Brand/portals/h1Opened.gif);
+  filter: drop-shadow(0px 0px 25px #6f10a2);
+  transition: 1s;
+}
+.tools-menu-master .tools-portal-counter .tools-portal-counter-text {
+  position: relative;
+  top: 5.75em;
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+  color: #3d3d3d;
+  transition: 0.2s;
+}
+
+@media (max-width: 1092px) {
+  .tools-menu-master .tools-portal-counter .tools-portal-counter-icon {
+    top: 9em;
+    height: 12.5em;
+    transition: 0.2s;
+  }
+  .tools-menu-master .tools-portal-counter .tools-portal-counter-text {
+    top: 6.25em;
+    font-size: 1.65em;
+    transition: 0.2s;
+  }
+}
+@media (max-width: 459px) {
+  .tools-menu-master .tools-portal-counter {
+    top: 2.5em;
+    transition: 0.2s;
+  }
+  .tools-menu-master .tools-portal-counter .tools-portal-counter-icon {
+    top: 7.5em;
+    height: 10em;
+    transition: 0.2s;
+  }
+  .tools-menu-master .tools-portal-counter .tools-portal-counter-text {
+    top: 6.25em;
+    font-size: 1.35em;
+    transition: 0.2s;
+  }
+}
+.portal-counter-master {
+  position: absolute;
+  top: 26em;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+.portal-counter-master .h1-counter {
+  position: absolute;
+  left: 5em;
+  width: 50%;
+  height: 50%;
+  display: block;
+}
+.portal-counter-master .h1-counter .h1-counter-icon {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 15em;
+  filter: drop-shadow(0px 0px 3.5px #727272);
+  transition: 0.2s;
+}
+.portal-counter-master .h1-counter .h1-counter-text {
+  position: absolute;
+  top: 5em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+  color: #3d3d3d;
+  transition: 0.2s;
+}
+.portal-counter-master .h2-counter {
+  position: absolute;
+  right: 5em;
+  width: 50%;
+  height: 50%;
+  display: block;
+}
+.portal-counter-master .h2-counter .h2-counter-icon {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 15em;
+  filter: drop-shadow(0px 0px 3.5px #727272);
+  transition: 0.2s;
+}
+.portal-counter-master .h2-counter .h2-counter-text {
+  position: absolute;
+  top: 5em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+  color: #3d3d3d;
+  transition: 0.2s;
+}
+
 .about-text-1 {
   position: absolute;
   top: 11.5em;
