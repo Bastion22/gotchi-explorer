@@ -1044,10 +1044,11 @@ header {
 }
 .portal-counter-master .h1-counter {
   position: absolute;
-  left: 5em;
+  left: 4.5em;
   width: 50%;
   height: 50%;
   display: block;
+  transition: 0.2s;
 }
 .portal-counter-master .h1-counter .h1-counter-icon {
   position: absolute;
@@ -1059,21 +1060,23 @@ header {
 }
 .portal-counter-master .h1-counter .h1-counter-text {
   position: absolute;
-  top: 5em;
+  top: 5.15em;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2em;
   text-align: center;
   cursor: pointer;
+  font-style: italic;
   color: #3d3d3d;
   transition: 0.2s;
 }
 .portal-counter-master .h2-counter {
   position: absolute;
-  right: 5em;
+  right: 4.5em;
   width: 50%;
   height: 50%;
   display: block;
+  transition: 0.2s;
 }
 .portal-counter-master .h2-counter .h2-counter-icon {
   position: absolute;
@@ -1085,16 +1088,114 @@ header {
 }
 .portal-counter-master .h2-counter .h2-counter-text {
   position: absolute;
-  top: 5em;
+  top: 5.15em;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2em;
   text-align: center;
   cursor: pointer;
+  font-style: italic;
   color: #3d3d3d;
   transition: 0.2s;
 }
 
+@media (max-width: 1092px) {
+  .portal-counter-master .h1-counter {
+    left: 1.5em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h1-counter .h1-counter-icon {
+    height: 14em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h1-counter .h1-counter-text {
+    top: 5em;
+    left: 50%;
+    font-size: 1.9em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h2-counter {
+    right: 1.5em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h2-counter .h2-counter-icon {
+    height: 14em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h2-counter .h2-counter-text {
+    top: 5em;
+    left: 50%;
+    font-size: 1.9em;
+    transition: 0.2s;
+  }
+}
+@media (max-width: 681px) {
+  .portal-counter-master {
+    top: 24em;
+  }
+  .portal-counter-master .h1-counter {
+    left: 0.75em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h1-counter .h1-counter-icon {
+    height: 11.5em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h1-counter .h1-counter-text {
+    top: 5em;
+    left: 50%;
+    font-size: 1.6em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h2-counter {
+    right: 0.75em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h2-counter .h2-counter-icon {
+    height: 11.5em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h2-counter .h2-counter-text {
+    top: 5em;
+    left: 50%;
+    font-size: 1.6em;
+    transition: 0.2s;
+  }
+}
+@media (max-width: 459px) {
+  .portal-counter-master {
+    top: 19em;
+    display: block !important;
+  }
+  .portal-counter-master .h1-counter {
+    left: 0.35em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h1-counter .h1-counter-icon {
+    height: 7em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h1-counter .h1-counter-text {
+    top: 4.25em;
+    left: 50%;
+    font-size: 1.2em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h2-counter {
+    right: 0.35em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h2-counter .h2-counter-icon {
+    height: 7em;
+    transition: 0.2s;
+  }
+  .portal-counter-master .h2-counter .h2-counter-text {
+    top: 4.25em;
+    left: 50%;
+    font-size: 1.2em;
+    transition: 0.2s;
+  }
+}
 .about-text-1 {
   position: absolute;
   top: 11.5em;

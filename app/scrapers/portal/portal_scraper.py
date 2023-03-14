@@ -9,7 +9,9 @@ class PortalScraper:
         
         h1_supply = {'h1':{'closed': 0, 'opened': 0, 'claimed': 0}}
         
-        for x in range(1, 10): # Do 1, 10K, last portal is 9999
+        for x in range(1, 10000): # Do 1, 10K, last portal is 9999
+            
+            print(x)
             
             query = f'''{{
             portal(id: {x}) {{
@@ -42,7 +44,9 @@ class PortalScraper:
         
         h2_supply = {'h2':{'closed': 0, 'opened': 0, 'claimed': 0}}
         
-        for x in range(10000, 10010): # Do 10K, 25.001K, last portal is 25000
+        for x in range(10000, 25001): # Do 10K, 25.001K, last portal is 25000
+            
+            print(x)
             
             query = f'''{{
             portal(id: {x}) {{
