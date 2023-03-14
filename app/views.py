@@ -10,11 +10,11 @@ from .scrapers.wearable.wearable_scraper import WearableScraper
 
 import os
 
-# Navigate up one level from current directory
-parent_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
+# Get the current directory of the script
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Access the folder you need to import from
-folder_path = os.path.join(parent_dir, 'gotchitraits', 'app', 'data_libraries', 'portal_supply')
+# Create the path to the subdirectory relative to the current directory
+folder_path = os.path.join(current_dir, 'data_libraries', 'portal_supply')
 
 
 # Create your views here.
