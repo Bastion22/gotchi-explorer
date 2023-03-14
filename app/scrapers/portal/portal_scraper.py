@@ -54,20 +54,25 @@ class PortalScraper:
             }}
             }}'''
             
-            url = 'https://subgraph.satsuma-prod.com/tWYl5n5y04oz/aavegotchi/aavegotchi-core-matic/api'
-            r = requests.post(url, json={'query': query})
-            h2_portals_raw_data = json.loads(r.text)
+            try:
             
-            portal_status = h2_portals_raw_data['data']['portal']['status']
+                url = 'https://subgraph.satsuma-prod.com/tWYl5n5y04oz/aavegotchi/aavegotchi-core-matic/api'
+                r = requests.post(url, json={'query': query})
+                h2_portals_raw_data = json.loads(r.text)
+                
+                portal_status = h2_portals_raw_data['data']['portal']['status']
             
-            if portal_status == 'Opened':
-                h2_supply['h2']['opened'] += 1
-                
-            elif portal_status =='Claimed':
-                h2_supply['h2']['claimed'] += 1
-                
-            elif portal_status == 'Bought':
-                h2_supply['h2']['closed'] += 1
+                if portal_status == 'Opened':
+                    h2_supply['h2']['opened'] += 1
+                    
+                elif portal_status =='Claimed':
+                    h2_supply['h2']['claimed'] += 1
+                    
+                elif portal_status == 'Bought':
+                    h2_supply['h2']['closed'] += 1
+                    
+            except:
+                continue
         
         
         # Dump H2 Supply to json File
@@ -77,5 +82,5 @@ class PortalScraper:
     
 
 
-PortalScraper.scrape_h1_portals()
+# PortalScraper.scrape_h1_portals()
 PortalScraper.scrape_h2_portals()
